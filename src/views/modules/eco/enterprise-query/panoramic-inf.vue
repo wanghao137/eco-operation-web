@@ -50,6 +50,18 @@ export default {
     // 以下方式引入路由是路由的懒加载，有利于页面优化
     businessCard: resolve => {
       require(['./businessCard.vue'], resolve)
+    },
+    developmentHistory: resolve => {
+      require(['./developmentHistory.vue'], resolve)
+    },
+    qualificationsAndHonors: resolve => {
+      require(['./qualificationsAndHonors.vue'], resolve)
+    },
+    intellectualPropertyRight: resolve => {
+      require(['./intellectualPropertyRight.vue'], resolve)
+    },
+    talentDemand: resolve => {
+      require(['./talentDemand.vue'], resolve)
     }
   },
   data () {
