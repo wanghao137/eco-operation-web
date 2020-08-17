@@ -20,7 +20,17 @@
         <el-col style="text-align: center" :span="5">有效期至:{{item.enddate}}</el-col>
         <el-col style="text-align: center" :span="5">认证机构:{{item.auth}}</el-col>
       </li>
-      <li v-for="item in collapseList">
+      <li v-for="(item, index) in collapseList" :key="index">
+        <el-col style="margin-left: 10px" :span="6">
+          <el-row class="row-title">{{item.title}}</el-row>
+          <el-row class="row-num">证书编号:{{item.code}}</el-row>
+          <el-row class="row-num">认证内容:{{item.content}}</el-row>
+        </el-col>
+        <el-col style="text-align: center" :span="5">发证时间:{{item.date}}</el-col>
+        <el-col style="text-align: center" :span="5">有效期至:{{item.enddate}}</el-col>
+        <el-col style="text-align: center" :span="5">认证机构:{{item.auth}}</el-col>
+      </li>
+      <li v-for="(item, index) in collapseList" :key="index" v-show="isOpen">
         <el-col style="margin-left: 10px" :span="6">
           <el-row class="row-title">{{item.title}}</el-row>
           <el-row class="row-num">证书编号:{{item.code}}</el-row>
@@ -31,7 +41,8 @@
         <el-col style="text-align: center" :span="5">认证机构:{{item.auth}}</el-col>
       </li>
     </ul>
-    <div class="table-more"><i class="el-icon-caret-bottom"></i>点击获取更多</div>
+    <div class="table-more" v-show="!isOpen" @click="isOpen = !isOpen"><i class="el-icon-caret-bottom"></i>点击获取更多</div>
+    <div class="table-more" v-show="isOpen" @click="isOpen = !isOpen"><i class="el-icon-caret-top"></i>收起</div>
     <div style="margin-top: 20px" class="talent-title">
       <span>企业荣誉</span>
       <el-button
@@ -47,7 +58,7 @@
       stripe
       border
       size="small"
-      style="width: 100%">
+      :height="tableH">
       <el-table-column
         prop="name"
         label="荣誉名称"
@@ -70,7 +81,8 @@
         width="150">
       </el-table-column>
     </el-table>
-    <div class="table-more"><i class="el-icon-caret-bottom"></i>点击获取更多</div>
+    <div class="table-more" v-show="!tableOpen" @click="open()"><i class="el-icon-caret-bottom"></i>点击获取更多</div>
+    <div class="table-more" v-show="tableOpen" @click="close()"><i class="el-icon-caret-top"></i>收起</div>
   </div>
 </template>
 
@@ -78,6 +90,9 @@
   export default {
     data () {
       return {
+        tableH: 235,
+        isOpen: false,
+        tableOpen: false,
         collapseList: [
           {
             title: '强制性认证',
@@ -139,12 +154,37 @@
           name: '中国大数据产业龙头企业',
           rate: 'DT大数据产业创新研究院',
           date: '2020-08-20'
+        }, {
+          name: '中国大数据产业龙头企业',
+          rate: 'DT大数据产业创新研究院',
+          date: '2020-08-20'
+        }, {
+          name: '中国大数据产业龙头企业',
+          rate: 'DT大数据产业创新研究院',
+          date: '2020-08-20'
+        }, {
+          name: '中国大数据产业龙头企业',
+          rate: 'DT大数据产业创新研究院',
+          date: '2020-08-20'
+        }, {
+          name: '中国大数据产业龙头企业',
+          rate: 'DT大数据产业创新研究院',
+          date: '2020-08-20'
+        }, {
+          name: '中国大数据产业龙头企业',
+          rate: 'DT大数据产业创新研究院',
+          date: '2020-08-20'
         }]
       }
     },
     methods: {
-      handleChange (val) {
-        console.log(val)
+      close () {
+        this.tableH = 235
+        this.tableOpen = !this.tableOpen
+      },
+      open () {
+        this.tableOpen = !this.tableOpen
+        this.tableH = 433
       }
     }
   }

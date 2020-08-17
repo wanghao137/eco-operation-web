@@ -152,11 +152,11 @@
     border-top: 2px solid #3E8EF7;
   }
   .row-title{
-    line-height: 40px;
+    line-height: 30px;
     color: #3E8EF7;
   }
   .row-num{
-    line-height: 10px;
+    line-height: 20px;
     font-size: 12px;
   }
 </style>

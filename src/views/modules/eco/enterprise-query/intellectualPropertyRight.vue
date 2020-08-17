@@ -15,7 +15,7 @@
       stripe
       border
       size="small"
-      style="width: 100%">
+      :height="tableH">
       <el-table-column
         prop="patent"
         label="专利类型"
@@ -45,7 +45,8 @@
         width="120">
       </el-table-column>
     </el-table>
-    <div class="table-more"><i class="el-icon-caret-bottom"></i>点击获取更多</div>
+    <div class="table-more" v-show="!tableOpen" @click="open()"><i class="el-icon-caret-bottom"></i>点击获取更多</div>
+    <div class="table-more" v-show="tableOpen" @click="close()"><i class="el-icon-caret-top"></i>收起</div>
     <div style="margin-top: 20px" class="talent-title">
       <span>商标注册</span>
       <el-button
@@ -62,7 +63,7 @@
       stripe
       border
       size="small"
-      style="width: 100%">
+      :height="tablemarkH">
       <el-table-column
         prop="regnum"
         label="注册号"
@@ -99,7 +100,8 @@
         width="120">
       </el-table-column>
     </el-table>
-    <div class="table-more"><i class="el-icon-caret-bottom"></i>点击获取更多</div>
+    <div class="table-more" v-show="!tablemarkOpen" @click="markopen()"><i class="el-icon-caret-bottom"></i>点击获取更多</div>
+    <div class="table-more" v-show="tablemarkOpen" @click="markclose()"><i class="el-icon-caret-top"></i>收起</div>
   </div>
 </template>
 
@@ -107,7 +109,36 @@
   export default {
     data () {
       return {
+        tableH: 235,
+        tablemarkH: 235,
+        tablemarkOpen: false,
+        tableOpen: false,
         tableData: [{
+          patent: '发明专利',
+          patentname: '充电方法及装置',
+          status: '公开',
+          date: '2020-08-20'
+        }, {
+          patent: '发明专利',
+          patentname: '终端触控识别方法及装置',
+          status: '公开',
+          date: '2020-08-20'
+        }, {
+          patent: '发明专利',
+          patentname: '配置电子设备场景的方法及装置',
+          status: '公开',
+          date: '2020-08-20'
+        }, {
+          patent: '发明专利',
+          patentname: '充电方法及装置',
+          status: '公开',
+          date: '2020-08-20'
+        }, {
+          patent: '发明专利',
+          patentname: '图书推荐方法及装置',
+          status: '公开',
+          date: '2020-08-20'
+        }, {
           patent: '发明专利',
           patentname: '充电方法及装置',
           status: '公开',
@@ -163,10 +194,57 @@
           field: '[16]办公用品',
           date: '2020-08-20',
           status: '有效'
+        }, {
+          regnum: '22075629',
+          brandname: 'AD TAG',
+          field: '[35]广告销售',
+          date: '2020-08-20',
+          status: '有效'
+        }, {
+          regnum: '22075586',
+          brandname: 'TAG',
+          field: '[35]广告销售',
+          date: '2020-08-20',
+          status: '有效'
+        }, {
+          regnum: '22075345',
+          brandname: 'AD TAG',
+          field: '[9]科学仪器',
+          date: '2020-08-20',
+          status: '有效'
+        }, {
+          regnum: '22075513',
+          brandname: 'TAG',
+          field: '[9]科学仪器',
+          date: '2020-08-20',
+          status: '有效'
+        }, {
+          regnum: '22044294',
+          brandname: '米家',
+          field: '[16]办公用品',
+          date: '2020-08-20',
+          status: '有效'
         }]
       }
     },
-    methods: {}
+    methods: {
+      close () {
+        this.tableH = 235
+        this.tableOpen = !this.tableOpen
+      },
+      open () {
+        this.tableOpen = !this.tableOpen
+        this.tableH = 433
+      },
+      markclose () {
+        this.tablemarkH = 235
+        this.tablemarkOpen = !this.tablemarkOpen
+      },
+      markopen () {
+        this.tablemarkOpen = !this.tablemarkOpen
+        this.tablemarkH = 433
+      }
+    }
   }
 </script>
 

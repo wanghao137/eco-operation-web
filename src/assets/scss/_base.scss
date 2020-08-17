@@ -379,3 +379,24 @@ img {
   height: 60px;
   line-height: 60px;
 }
+//时间轴样式修改
+.el-timeline-item__node--large{
+  left: -6px;
+  width: 22px;
+  height: 22px;
+}
+.el-timeline-item__timestamp.is-top{
+  position: absolute;
+  margin-bottom: 8px;
+  padding-top: 8px;
+  left: -55px;
+}
+.el-timeline-item__node--normal {
+  left: -3px;
+  width: 16px;
+  height: 16px;
+  background-color: #b2d8f6;
+}
+.el-timeline-item__tail{
+  border-left: 1.5px solid #b2d8f6;
+}
