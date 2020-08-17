@@ -20,7 +20,7 @@
         <el-col style="text-align: center" :span="5">有效期至:{{item.enddate}}</el-col>
         <el-col style="text-align: center" :span="5">认证机构:{{item.auth}}</el-col>
       </li>
-      <li v-for="(item, index) in collapseList" :key="index">
+      <li v-for="item in collapseList">
         <el-col style="margin-left: 10px" :span="6">
           <el-row class="row-title">{{item.title}}</el-row>
           <el-row class="row-num">证书编号:{{item.code}}</el-row>
