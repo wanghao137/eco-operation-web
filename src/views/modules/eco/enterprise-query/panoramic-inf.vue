@@ -62,6 +62,9 @@ export default {
     },
     talentDemand: resolve => {
       require(['./talentDemand.vue'], resolve)
+    },
+    annualReports: resolve => {
+      require(['./annualReports.vue'], resolve)
     }
   },
   data () {
