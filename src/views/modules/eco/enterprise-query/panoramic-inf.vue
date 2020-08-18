@@ -66,6 +66,12 @@ export default {
     nationalTaxData: resolve => {
       require(['./nationalTaxData.vue'], resolve)
     },
+    customsTrade: resolve => {
+      require(['./customsTrade.vue'], resolve)
+    },
+    relationshipContext: resolve => {
+      require(['./relationshipContext.vue'], resolve)
+    },
     developmentHistory: resolve => {
       require(['./developmentHistory.vue'], resolve)
     },

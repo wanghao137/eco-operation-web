@@ -54,81 +54,81 @@
           value: '选项5',
           label: '2019年'
         }],
-        value: '',
+        value: '2019年',
         tableData: [{
           type: '增值税',
-          time: '',
-          num: ''
+          time: '2018年',
+          num: '18725.357'
         }, {
           type: '企业所得税',
-          time: '',
-          num: ''
+          time: '2019年',
+          num: '3718.4963'
         }, {
           type: '契税',
-          time: '',
-          num: ''
+          time: '2020年',
+          num: '143934.05'
         }, {
           type: '个人所得税',
-          time: '',
-          num: ''
+          time: '2021年',
+          num: '18623.1'
         }]
       }
     },
     mounted () {
       this.drawLine()
-  },
+    },
     methods: {
       drawLine () {
         // 基于准备好的dom，初始化echarts实例
         let myChart = this.$echarts.init(document.getElementById('myChart'))
-  myChart.setOption({ // 绘制图表
-    color: ['steelblue'],
-    title: {text: '年度缴税(费)总额',
-      left: 'center',
-      textStyle: {
-            // 文字颜色
-        color: '#666',
-            // 字体粗细 'normal','bold','bolder','lighter',100 | 200 | 300 | 400...
-        fontWeight: 'normal',
-            // 字体大小
-        　　　　 fontSize: 17
-      }
-    },
-    tooltip: {
-      trigger: 'axis',
-      axisPointer: {            // 坐标轴指示器，坐标轴触发有效
-        type: 'shadow'        // 默认为直线，可选为：'line' | 'shadow'
-      }
-    },
-    grid: {
-      left: '3%',
-      right: '4%',
-      bottom: '3%',
-      containLabel: true
-    },
-    xAxis: [
-      {
-        type: 'category',
-        data: ['2015年', '2016年', '2017年', '2018年', '2019年', '2020年'],
-        axisTick: {
-          alignWithLabel: true
-        }
-      }
-    ],
-    yAxis: [
-      {
-        type: 'value'
-      }
-    ],
-    series: [
-      {
-        name: '直接访问',
-        type: 'bar',
-        barWidth: '60%',
-        data: [10, 52, 200, 334, 390, 330]
-      }
-    ]
-  })
+        myChart.setOption({ // 绘制图表
+          color: ['steelblue'],
+          title: {text: '年度缴税(费)总额',
+            left: 'center',
+            textStyle: {
+                  // 文字颜色
+              color: '#666',
+                  // 字体粗细 'normal','bold','bolder','lighter',100 | 200 | 300 | 400...
+              fontWeight: 'normal',
+                  // 字体大小
+              fontSize: 17
+            }
+          },
+          tooltip: {
+            trigger: 'axis',
+            axisPointer: {            // 坐标轴指示器，坐标轴触发有效
+              type: 'shadow'        // 默认为直线，可选为：'line' | 'shadow'
+            }
+          },
+          grid: {
+            left: '3%',
+            right: '4%',
+            bottom: '3%',
+            containLabel: true
+          },
+          xAxis: [
+            {
+              type: 'category',
+              data: ['2015年', '2016年', '2017年', '2018年', '2019年', '2020年'],
+              axisTick: {
+                alignWithLabel: true
+              }
+            }
+          ],
+          yAxis: [
+            {
+              type: 'value'
+            }
+          ],
+          series: [
+            {
+              name: '直接访问',
+              type: 'bar',
+              barWidth: '60%',
+              data: [10, 52, 200, 334, 390, 330]
+            }
+          ]
+        })
       }
     }
   }
