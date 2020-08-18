@@ -80,6 +80,9 @@ export default {
     },
     networkManagement: resolve => {
       require(['./networkManagement.vue'], resolve)
+    },
+    illegalWarning: resolve => {
+      require(['./illegalWarning.vue'], resolve)
     }
   },
   data () {

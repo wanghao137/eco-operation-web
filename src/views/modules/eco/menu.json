@@ -62,9 +62,5 @@
   {
     "name":"新闻舆情",
     "path":"newsAndPublicOpinion"
-  },
-  {
-    "name":"电视报道",
-    "path":"TVcoverage"
   }
 ]
