@@ -51,6 +51,9 @@ export default {
     businessCard: resolve => {
       require(['./businessCard.vue'], resolve)
     },
+    info: resolve => {
+      require(['./info.vue'], resolve)
+    },
     developmentHistory: resolve => {
       require(['./developmentHistory.vue'], resolve)
     },
