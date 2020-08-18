@@ -187,7 +187,7 @@
   .titles{
     width: 100%;
     display: flex;
-    border-left: 3px solid steelblue;
+    border-left: 3px solid #3E8EF7;
   }
   .left{
      flex: 1;
@@ -201,7 +201,8 @@
     justify-content: center;
   }
   .content{
-    font-size: 20px;
+    font-size: 18px;
+    font-weight: bold;
     padding-left: 10px;
   }
   .information{

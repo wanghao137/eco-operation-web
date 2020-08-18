@@ -54,6 +54,18 @@ export default {
     info: resolve => {
       require(['./info.vue'], resolve)
     },
+    enterpriseInvestment: resolve => {
+      require(['./enterpriseInvestment.vue'], resolve)
+    },
+    executiveInvestment: resolve => {
+      require(['./executiveInvestment.vue'], resolve)
+    },
+    annualReports: resolve => {
+      require(['./annualReports.vue'], resolve)
+    },
+    nationalTaxData: resolve => {
+      require(['./nationalTaxData.vue'], resolve)
+    },
     developmentHistory: resolve => {
       require(['./developmentHistory.vue'], resolve)
     },
@@ -66,9 +78,7 @@ export default {
     talentDemand: resolve => {
       require(['./talentDemand.vue'], resolve)
     },
-    annualReports: resolve => {
-      require(['./annualReports.vue'], resolve)
-    }
+
   },
   data () {
     return {

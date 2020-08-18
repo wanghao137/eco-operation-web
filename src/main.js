@@ -12,13 +12,11 @@ import httpRequest from '@/utils/httpRequest' // api: https://github.com/axios/a
 import { isAuth } from '@/utils'
 import cloneDeep from 'lodash/cloneDeep'
 import BaiduMap from 'vue-baidu-map'
-
-import waterfall from 'vue-waterfall2'
-Vue.use(waterfall)
+import echarts from 'echarts'
+Vue.prototype.$echarts = echarts
 Vue.use(BaiduMap, {
   ak: 'waNgMpAwF3uaYVDhtw2kWcvcgpdvIxtr'
 })
-
 Vue.use(VueCookie)
 Vue.config.productionTip = false
 

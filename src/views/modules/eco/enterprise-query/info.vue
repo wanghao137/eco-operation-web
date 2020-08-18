@@ -316,7 +316,8 @@
     justify-content: center;
   }
   .content{
-    font-size: 20px;
+    font-size: 18px;
+    font-weight: bold;
     padding-left: 10px;
   }
   .information{
