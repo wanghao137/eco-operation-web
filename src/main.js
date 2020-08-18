@@ -12,8 +12,9 @@ import httpRequest from '@/utils/httpRequest' // api: https://github.com/axios/a
 import { isAuth } from '@/utils'
 import cloneDeep from 'lodash/cloneDeep'
 import BaiduMap from 'vue-baidu-map'
-import echarts from 'echarts'
-Vue.prototype.$echarts = echarts
+// 引入echarts
+import echarts from 'echarts'
+Vue.prototype.$echarts = echarts
 Vue.use(BaiduMap, {
   ak: 'waNgMpAwF3uaYVDhtw2kWcvcgpdvIxtr'
 })
