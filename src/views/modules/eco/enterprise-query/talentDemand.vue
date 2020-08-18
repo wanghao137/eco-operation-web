@@ -141,7 +141,7 @@
 <style scoped>
   .talent-title{
     margin-bottom: 15px;
-    border-left: 2px solid #3E8EF7;
+    border-left: 3px solid #3E8EF7;
   }
   .talent-title span {
     font-size: 16px;

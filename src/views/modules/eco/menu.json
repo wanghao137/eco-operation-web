@@ -20,20 +20,12 @@
     "path":"annualReports"
   },
   {
-    "name":"国税数据",
+    "name":"缴税数据",
     "path":"nationalTaxData"
   },
   {
     "name":"海关贸易",
     "path":"customsTrade"
-  },
-  {
-    "name":"水电用量",
-    "path":"waterAndElectricityConsumption"
-  },
-  {
-    "name":"社保情况",
-    "path":"socialSecurity"
   },
   {
     "name":"关系脉络",

@@ -78,7 +78,9 @@ export default {
     talentDemand: resolve => {
       require(['./talentDemand.vue'], resolve)
     },
-
+    networkManagement: resolve => {
+      require(['./networkManagement.vue'], resolve)
+    }
   },
   data () {
     return {
