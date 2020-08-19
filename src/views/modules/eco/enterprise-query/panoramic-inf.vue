@@ -1,113 +1,62 @@
 <template>
   <div class="main-container">
-    <el-row>
-
         <div class="head">
           <div class="head-box">
-            <div class="head-left">小米科技有限责任公司</div>
+            <div style="margin-top: 10px" class="head-left">小米科技有限责任公司</div>
             <div class="head-right">
-              <dl>
-                <dd>健康描述</dd>
-                <dt>
-                  <p>619</p><span>比较健康</span>
-                </dt>
-              </dl>
-              <dl>
-                <dd>收入规模</dd>
-                <dt>
-                  <p>500亿-700亿</p>
-                </dt>
-              </dl>
-              <dl>
-                <dd>行业领域</dd>
-                <dt>
-                  <p>科学与技术研究</p>
-                </dt>
-              </dl>
+              <el-tabs v-model="activeName">
+                <el-tab-pane
+                  :label="item.name"
+                  :name="item.path"
+                  v-for="(item,index) in menu"
+                  :key="index"
+                ></el-tab-pane>
+                <div class="inf-left inf-high">高新技术企业</div>
+                <div class="inf-left inf-down">低风险</div>
+                <div class="inf-left inf-ent">一般企业400</div>
+              </el-tabs>
             </div>
           </div>
         </div>
-        <el-col :span="3" :xs="24">
-          <el-tabs :tab-position="tabPosition" v-model="currentView">
-            <el-tab-pane
-              :label="item.name"
-              :name="item.path"
-              v-for="(item,index) in menu"
-              :key="index"
-            ></el-tab-pane>
-          </el-tabs>
-        </el-col>
-      <el-col :span="21" :xs="24">
-        <!--:is 的作用：会将div标签转换成 currentView 变量绑定的这个组件-->
-        <div :is="currentView" keep-alive></div>
-      </el-col>
-    </el-row>
+        <div :is="activeName" keep-alive></div>
   </div>
 </template>
 <script>
-import menu from '../menu.json'
 export default {
   components: {
     // 以下方式引入路由是路由的懒加载，有利于页面优化
-    businessCard: resolve => {
-      require(['./businessCard.vue'], resolve)
+    panImages: resolve => {
+      require(['./panImages.vue'], resolve)
     },
-    info: resolve => {
-      require(['./info.vue'], resolve)
+    riskLevel: resolve => {
+      require(['./riskLevel.vue'], resolve)
     },
-    enterpriseInvestment: resolve => {
-      require(['./enterpriseInvestment.vue'], resolve)
-    },
-    executiveInvestment: resolve => {
-      require(['./executiveInvestment.vue'], resolve)
-    },
-    annualReports: resolve => {
-      require(['./annualReports.vue'], resolve)
-    },
-    nationalTaxData: resolve => {
-      require(['./nationalTaxData.vue'], resolve)
-    },
-    customsTrade: resolve => {
-      require(['./customsTrade.vue'], resolve)
-    },
-    relationshipContext: resolve => {
-      require(['./relationshipContext.vue'], resolve)
-    },
-    developmentHistory: resolve => {
-      require(['./developmentHistory.vue'], resolve)
-    },
-    qualificationsAndHonors: resolve => {
-      require(['./qualificationsAndHonors.vue'], resolve)
-    },
-    intellectualPropertyRight: resolve => {
-      require(['./intellectualPropertyRight.vue'], resolve)
-    },
-    talentDemand: resolve => {
-      require(['./talentDemand.vue'], resolve)
-    },
-    networkManagement: resolve => {
-      require(['./networkManagement.vue'], resolve)
-    },
-    legalProceedings: resolve => {
-      require(['./legalProceedings.vue'], resolve)
-    },
-    illegalWarning: resolve => {
-      require(['./illegalWarning.vue'], resolve)
-    },
-    newsAndPublicOpinion: resolve => {
-      require(['./newsAndPublicOpinion.vue'], resolve)
+    creditEva: resolve => {
+      require(['./creditEva.vue'], resolve)
     }
   },
   data () {
     return {
-      menu: [], // 菜单
-      tabPosition: 'left',
-      currentView: 'businessCard' // 当前组件
+      menu: [
+        {
+          'name': '全景画像',
+          'path': 'panImages'
+        },
+        {
+          'name': '风险等级',
+          'path': 'riskLevel'
+        },
+        {
+          'name': '综合能力',
+          'path': 'creditEva'
+        }
+      ], // 菜单
+      activeName: 'panImages' // 当前组件
     }
   },
   methods: {},
   created () {
-    this.menu = menu
+    // this.menu = menu
   }
 }
 </script>
@@ -172,5 +121,25 @@ export default {
   padding: 3px 7px;
   box-sizing: border-box;
   font-size: 12px;
+}
+  .inf-left{
+    float: left;
+    height: 25px;
+    line-height: 25px;
+    font-size: 12px;
+    width: 80px;
+    text-align: center;
+    color: #6D6F70;
+  }
+.inf-high{
+  background-color: #BDD7EE;
+  margin-right: 10px;
+}
+.inf-down{
+  background-color: #FFFF00;
+  margin-right: 10px;
+}
+.inf-ent{
+  background-color: #C5E0B4;
 }
 </style>

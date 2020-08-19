@@ -84,14 +84,17 @@
     <div class="main mainMid">
       <div class="left">
         <dl>
+          <i class="el-icon-s-data"></i>
           <dd>综合信用等级</dd>
           <dt>BBB</dt>
         </dl>
         <dl>
+          <i class="el-icon-data-line"></i>
           <dd>信用评价</dd>
           <dt>低于平均风险</dt>
         </dl>
         <dl>
+          <i class="el-icon-star-off"></i>
           <dd>综合信用评分</dd>
           <dt>619</dt>
         </dl>
@@ -360,6 +363,13 @@ h1 span {
 .left dl dt {
   color: #60ac3a;
   margin-top: 10px;
+}
+.left dl dd {
+  margin-top: 10px;
+}
+.left i{
+  font-size: 30px;
+  color: #BBBBBB;
 }
 .right {
   flex: 1;

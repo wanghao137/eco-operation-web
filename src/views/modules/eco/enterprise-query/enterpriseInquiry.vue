@@ -36,49 +36,49 @@
 </template>
 
 <script>
-import AdvancedSearch from "./components/advancedSearch";
+import AdvancedSearch from './components/advancedSearch'
 export default {
-  name: "enterpriseInquiry",
-  data() {
+  name: 'enterpriseInquiry',
+  data () {
     return {
       dialogVisible: false,
-      input: "",
-      lis: ["企业名称", "统一社会信用代码", "注册地址"],
+      input: '',
+      lis: ['企业名称', '统一社会信用代码', '注册地址'],
       liIndex: 0,
-      info:[]
-    };
+      info: []
+    }
   },
   components: {
-    AdvancedSearch,
+    AdvancedSearch
   },
   methods: {
-    search(){
-      localStorage.setItem('inpVal',this.input)
-      localStorage.setItem('info',JSON.stringify(this.info))
+    search () {
+      localStorage.setItem('inpVal', this.input)
+      localStorage.setItem('info', JSON.stringify(this.info))
       this.$router.push('searchDetails')
     },
-    liFn(index) {
-      this.liIndex = index;
+    liFn (index) {
+      this.liIndex = index
     },
-    handleClose(done) {
-      this.$confirm("确认关闭？")
+    handleClose (done) {
+      this.$confirm('确认关闭？')
         .then((_) => {
-          done();
+          done()
         })
-        .catch((_) => {});
+        .catch((_) => {})
     },
-    confirm() {
-      this.$refs.child.confirm();
+    confirm () {
+      this.$refs.child.confirm()
     },
-    confirmVal(val){
+    confirmVal (val) {
       this.dialogVisible = false
       this.info = val
     },
-    reset(){
-      this.$refs.child.reset();
+    reset () {
+      this.$refs.child.reset()
     }
-  },
-};
+  }
+}
 </script>
 
 <style scoped>
