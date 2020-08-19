@@ -415,6 +415,19 @@ var dataList = [
     'orderNum': 2,
     'open': null,
     'list': null
+  },
+  {
+    'menuId': '13',
+    'parentId': 10,
+    'parentName': null,
+    'name': '搜索详情',
+    'url': 'eco/enterprise-query/searchDetails',
+    'perms': null,
+    'type': 1,
+    'icon': 'log',
+    'orderNum': 2,
+    'open': null,
+    'list': null
   }
 ]
 // 左侧菜单配置
@@ -432,24 +445,37 @@ var navDataList = [
     'open': null,
     'list': [
       {
-        'menuId': '11',
-        'parentId': 10,
-        'parentName': null,
-        'name': '企业综合查询',
-        'url': 'eco/enterprise-query/Integrated-query',
-        'perms': null,
-        'type': 1,
-        'icon': 'sousuo',
-        'orderNum': 1,
-        'open': null,
-        'list': null
-      },
-      {
         'menuId': '12',
         'parentId': 10,
         'parentName': null,
         'name': '企业全景信息',
+        'url': 'eco/enterprise-query/enterpriseInquiry',
+        'perms': null,
+        'type': 1,
+        'icon': 'sousuo',
+        'orderNum': 2,
+        'open': null,
+        'list': null
+      },
+      {
+        'menuId': '98',
+        'parentId': 10,
+        'parentName': null,
+        'name': '企业信息',
         'url': 'eco/enterprise-query/panoramic-inf',
+        'perms': null,
+        'type': 1,
+        'icon': 'log',
+        'orderNum': 2,
+        'open': null,
+        'list': null
+      },
+      {
+        'menuId': '99',
+        'parentId': 10,
+        'parentName': null,
+        'name': '搜索详情',
+        'url': 'eco/enterprise-query/searchDetails',
         'perms': null,
         'type': 1,
         'icon': 'log',

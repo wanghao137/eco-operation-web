@@ -1,17 +1,7 @@
 <template>
   <div class="main-container">
-    <el-row :gutter="20">
-      <el-col :span="3" :xs="24">
-        <el-tabs :tab-position="tabPosition" v-model="currentView">
-          <el-tab-pane
-            :label="item.name"
-            :name="item.path"
-            v-for="(item,index) in menu"
-            :key="index"
-          ></el-tab-pane>
-        </el-tabs>
-      </el-col>
-      <el-col :span="21" :xs="24">
+    <el-row>
+
         <div class="head">
           <div class="head-box">
             <div class="head-left">小米科技有限责任公司</div>
@@ -37,6 +27,17 @@
             </div>
           </div>
         </div>
+        <el-col :span="3" :xs="24">
+          <el-tabs :tab-position="tabPosition" v-model="currentView">
+            <el-tab-pane
+              :label="item.name"
+              :name="item.path"
+              v-for="(item,index) in menu"
+              :key="index"
+            ></el-tab-pane>
+          </el-tabs>
+        </el-col>
+      <el-col :span="21" :xs="24">
         <!--:is 的作用：会将div标签转换成 currentView 变量绑定的这个组件-->
         <div :is="currentView" keep-alive></div>
       </el-col>
