@@ -514,7 +514,7 @@ var navDataList = [
         'menuId': '15',
         'parentId': 13,
         'parentName': null,
-        'name': '区域产业重合度',
+        'name': '企业成长性分析',
         'url': 'eco/industrial-dev/Industry-overlap',
         'perms': null,
         'type': 1,
@@ -527,7 +527,7 @@ var navDataList = [
         'menuId': '16',
         'parentId': 13,
         'parentName': null,
-        'name': '成长行业分析',
+        'name': '区域产业结构差异',
         'url': 'eco/industrial-dev/growth-industry',
         'perms': null,
         'type': 1,
@@ -535,20 +535,20 @@ var navDataList = [
         'orderNum': 3,
         'open': null,
         'list': null
-      },
-      {
-        'menuId': '17',
-        'parentId': 13,
-        'parentName': null,
-        'name': '重点产业链分析',
-        'url': 'eco/industrial-dev/key-industrial',
-        'perms': null,
-        'type': 1,
-        'icon': 'shoucangfill',
-        'orderNum': 4,
-        'open': null,
-        'list': null
       }
+      // {
+      //   'menuId': '17',
+      //   'parentId': 13,
+      //   'parentName': null,
+      //   'name': '重点产业链分析',
+      //   'url': 'eco/industrial-dev/key-industrial',
+      //   'perms': null,
+      //   'type': 1,
+      //   'icon': 'shoucangfill',
+      //   'orderNum': 4,
+      //   'open': null,
+      //   'list': null
+      // }
     ]
   },
   {
@@ -567,7 +567,7 @@ var navDataList = [
         'menuId': '19',
         'parentId': 18,
         'parentName': null,
-        'name': '企业活跃度分析',
+        'name': '企业基本情况分析',
         'url': 'eco/enterprise-analysis/enterprise-activity',
         'perms': null,
         'type': 1,
@@ -580,25 +580,12 @@ var navDataList = [
         'menuId': '20',
         'parentId': 18,
         'parentName': null,
-        'name': '企业生存路径',
+        'name': '企业活跃度分析',
         'url': 'eco/enterprise-analysis/enterprise-survival',
         'perms': null,
         'type': 1,
         'icon': 'gc',
         'orderNum': 2,
-        'open': null,
-        'list': null
-      },
-      {
-        'menuId': '21',
-        'parentId': 18,
-        'parentName': null,
-        'name': '企业特征分析',
-        'url': 'eco/enterprise-analysis/enterprise-cha',
-        'perms': null,
-        'type': 1,
-        'icon': 'tubiao',
-        'orderNum': 3,
         'open': null,
         'list': null
       },
@@ -615,6 +602,19 @@ var navDataList = [
         'open': null,
         'list': null
       }
+      // {
+      //   'menuId': '21',
+      //   'parentId': 18,
+      //   'parentName': null,
+      //   'name': '企业特征分析',
+      //   'url': 'eco/enterprise-analysis/enterprise-cha',
+      //   'perms': null,
+      //   'type': 1,
+      //   'icon': 'tubiao',
+      //   'orderNum': 3,
+      //   'open': null,
+      //   'list': null
+      // },
     ]
   },
   {
