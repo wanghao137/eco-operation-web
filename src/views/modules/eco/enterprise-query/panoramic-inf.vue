@@ -87,8 +87,14 @@ export default {
     networkManagement: resolve => {
       require(['./networkManagement.vue'], resolve)
     },
+    legalProceedings: resolve => {
+      require(['./legalProceedings.vue'], resolve)
+    },
     illegalWarning: resolve => {
       require(['./illegalWarning.vue'], resolve)
+    },
+    newsAndPublicOpinion: resolve => {
+      require(['./newsAndPublicOpinion.vue'], resolve)
     }
   },
   data () {

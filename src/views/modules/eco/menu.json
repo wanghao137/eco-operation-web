@@ -52,8 +52,8 @@
     "path":"networkManagement"
   },
   {
-    "name":"交易信息",
-    "path":"transactionInformation"
+    "name":"法律诉讼",
+    "path":"legalProceedings"
   },
   {
     "name":"违法警示",
