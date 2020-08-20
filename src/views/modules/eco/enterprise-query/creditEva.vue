@@ -137,56 +137,80 @@
           <table border="0" background="white" bgcolor="white">
             <tbody>
             <tr>
-              <td style="width: 300px" class="th">
+              <td class="th">
                 <b>专利</b>
               </td>
-              <td colspan="3">
-                <span>一种接入小区的方法及装置，菜单显示方法及装置，来电响应方法及装置，人脸图像验证方法和装置，
-                  异常信息获取方法及装置，确定用户设备控制权限的方法、装置及终端设备，处理图像的方法及装置，电路设计方法和装置，一种升级方法、装置及设备，图像识别处理方法和装置
-                </span>
+              <td style="width: 20%">
+                <span>9339</span>
+              </td>
+              <td style="width: 60%">
+                <span>图像处理，生物识别，移动终端</span>
               </td>
             </tr>
             <tr>
-              <td style="width: 300px" class="th">
-                <b>软件,作品著作权</b>
+              <td class="th">
+                <b>软件著作权</b>
               </td>
-              <td colspan="3">
-                <span>全民省钱购软件，航路起源游戏软件，黄金航线游戏软件，无尽之海游戏软件，POCO桌面软件，小米幸运万年历软件，小米FM」互联网音频播放软件，
-                  小米视频极速版」互联网视频播放软件，小米移动网上营业厅软件（Android版），小米蓝牙耳机AirDots 系列包装设计，小米智能遥控车，米家自动泡沫洗洁精套装
-                </span>
+              <td style="width: 20%">
+                <span>22</span>
+              </td>
+              <td style="width: 60%">
+                <span></span>
               </td>
             </tr>
             <tr>
-              <td style="width: 300px" class="th">
+              <td class="th">
+                <b>作品著作权</b>
+              </td>
+              <td style="width: 20%">
+                <span>44</span>
+              </td>
+              <td style="width: 60%">
+                <span></span>
+              </td>
+            </tr>
+            <tr>
+              <td class="th">
                 <b>资质证书</b>
               </td>
               <td>
-                <span>质量管理体系认证（ISO9000），互联网药品信息，其他自愿性工业产品认证，食品经营许可证，无线电，CCC强制性产品查询，进网许可证，核发进网许可证书
-                </span>
+                <span>237</span>
+              </td>
+              <td>
+                <span></span>
               </td>
             </tr>
             <tr>
-              <td style="width: 300px" class="th">
+              <td class="th">
                 <b>政府评级</b>
               </td>
               <td>
-                <span>一般企业</span>
+                <span>3</span>
+              </td>
+              <td>
+                <span></span>
               </td>
             </tr>
             <tr>
-              <td style="width: 300px" class="th">
+              <td class="th">
                 <b>产品技术</b>
               </td>
-              <td colspan="3">
-                <span>手机技术开发；手机生产，手机服务；销售通讯设备；维修仪器仪表；维修办公设备；筹备，策划，组织大型庆典；设计，制作，代理，发布广告。</span>
+              <td>
+                <span>567</span>
+              </td>
+              <td>
+                <span>高科技产品，中国制造，先进技术</span>
               </td>
             </tr>
             <tr>
-              <td style="width: 300px" class="th">
-                <b>人力资源</b>
+              <td class="th">
+                <b>人才需求</b>
               </td>
-              <td colspan="3">
-                <span>招聘经理，人工智能小爱-短视频策划运营，小爱产品经理，小爱产品经理，米家店铺员工，招聘经理，武汉HRBP，linux嵌入式软件工程师，财务BP，网格主管</span>
+              <td>
+                <span>132</span>
+              </td>
+              <td>
+                <span>本科，5年以上，研发，技术开发</span>
               </td>
             </tr>
             </tbody>
@@ -198,41 +222,50 @@
           <table border="0" background="white" bgcolor="white">
             <tbody>
             <tr>
-              <td style="width: 300px" class="th">
+              <td class="th">
                 <b>招投标</b>
               </td>
-              <td colspan="3">
-                <span>林芝市公安局林芝市人民警察训练基地维修改造项目监控及门禁系统采购项目（一标段、二标段）中标公告，
-                  九江市人众招投标咨询有限公司关于九江学院外录实验室设备更新项目（招标编号：JJRZ2020JT-104）竞争性谈判结果公示，
-                  泾源县大湾乡教育委员会泾源县大湾乡学区中心校专用设备政府采购项目公开方式招标中标公示，
-                  宁乡市数据资源中心宁乡智慧教育新高考综合服务平台建设合同公告
-                </span>
+              <td style="width: 20%">
+                <span>186</span>
+
+              </td>
+              <td style="width: 60%">
+                <span></span>
               </td>
             </tr>
             <tr>
-              <td style="width: 300px" class="th">
+              <td class="th">
                 <b>购地信息</b>
               </td>
-              <td colspan="3">
-                <span>海淀区安宁庄(科教用地)
-                </span>
+              <td>
+                <span>1</span>
+              </td>
+              <td>
+                <span></span>
               </td>
             </tr>
             <tr>
-              <td style="width: 300px" class="th">
+              <td class="th">
                 <b>进出口</b>
               </td>
               <td>
-                <span>京中关村(进出口收发货人)
+                <span>
+                </span>
+              </td>
+              <td>
+                <span>
                 </span>
               </td>
             </tr>
             <tr>
-              <td style="width: 300px" class="th">
+              <td class="th">
                 <b>产品</b>
               </td>
               <td>
-                <span>手机技术开发；手机生产，手机服务；销售通讯设备；维修仪器仪表；维修办公设备；筹备，策划，组织大型庆典；设计，制作，代理，发布广告。</span>
+                <span></span>
+              </td>
+              <td>
+                <span></span>
               </td>
             </tr>
             </tbody>
@@ -244,45 +277,49 @@
           <table border="0" background="white" bgcolor="white">
             <tbody>
             <tr>
-              <td style="width: 300px" class="th">
+              <td class="th">
                 <b>享受政府扶持补贴</b>
               </td>
-              <td colspan="3">
-                <span>林芝市公安局林芝市人民警察训练基地维修改造项目监控及门禁系统采购项目（一标段、二标段）中标公告，
-                  九江市人众招投标咨询有限公司关于九江学院外录实验室设备更新项目（招标编号：JJRZ2020JT-104）竞争性谈判结果公示，
-                  泾源县大湾乡教育委员会泾源县大湾乡学区中心校专用设备政府采购项目公开方式招标中标公示，
-                  宁乡市数据资源中心宁乡智慧教育新高考综合服务平台建设合同公告
-                </span>
+              <td style="width: 20%">
+                <span>3</span>
+              </td>
+              <td style="width: 60%">
+                <span>高新技术产业补贴</span>
               </td>
             </tr>
             <tr>
-              <td style="width: 300px" class="th">
+              <td class="th">
                 <b>融资能力</b>
               </td>
-              <td colspan="3">
-                <span>A轮——最后支付代价日期2011年5月17日，融得资金1025万美元，投资方：创始团队、晨兴资本、启明创投，
-                  B轮——最后支付代价日期2010年12月24日，融得资金2750万美元，B轮投资方分别为：晨兴资本、启明创投、IDG，
-                  C轮——最后支付代价日期2011年9月30日，融得资金8800万美元，投资方未公布，
-                  D轮——最后支付代价日期2012年6月22日，融得资金2.16亿美元，投资方未公布
-                </span>
+              <td>
+                <span>9</span>
+              </td>
+              <td>
+                <span>融资轮次，估值，投资方</span>
               </td>
             </tr>
             <tr>
-              <td style="width: 300px" class="th">
+              <td class="th">
                 <b>投资情况</b>
               </td>
               <td>
-                <span>天津金星创业投资有限公司，重庆小米创业投资有限公司，重庆小米商业保理有限公司，北京聚爱聊网络科技有限公司，深圳英鹏信息技术股份有限公司，
-                  湖北小米长江产业基金合伙企业（有限合伙），北京创派力量科技有限公司
+                <span>56
+                </span>
+              </td>
+              <td>
+                <span>投资行业，投资次数，投资总额，投资比例
                 </span>
               </td>
             </tr>
             <tr>
-              <td style="width: 300px" class="th">
+              <td class="th">
                 <b>招聘情况</b>
               </td>
               <td>
-                <span>招聘经理，人工智能小爱-短视频策划运营，小爱产品经理，小爱产品经理，米家店铺员工，招聘经理，武汉HRBP，linux嵌入式软件工程师，财务BP，网格主管</span>
+                <span>23</span>
+              </td>
+              <td>
+                <span>近期招聘频次和人数</span>
               </td>
             </tr>
             </tbody>
@@ -290,152 +327,147 @@
         </div>
       </el-tab-pane>
       <el-tab-pane label="财务能力(82)">
-<!--        <div id="myChart" style="width:350px;height:220px;"></div>-->
+        <div id="financeChart" style="width:500px;height:350px;"></div>
       </el-tab-pane>
       <el-tab-pane label="守法合规(70)">
-        <div class="talent-title">
-          <span>经营异常</span>
-          <el-button
-            style="font-size: 10px;padding: 2px 4px"
-            size="mini"
-            type="danger"
-            plain>
-            高风险信息
-          </el-button>
+        <div class="infor-table">
+          <table border="0" background="white" bgcolor="white">
+            <tbody>
+            <tr>
+              <td class="th">
+                <b>严重违法记录</b>
+              </td>
+              <td style="width: 20%">
+                <span></span>
+              </td>
+              <td style="width: 60%">
+                <span>正常</span>
+              </td>
+            </tr>
+            <tr>
+              <td class="th">
+                <b>失信人名单</b>
+              </td>
+              <td>
+                <span></span>
+              </td>
+              <td>
+                <span>正常</span>
+              </td>
+            </tr>
+            <tr>
+              <td class="th">
+                <b>异常经营名录</b>
+              </td>
+              <td>
+                <span></span>
+              </td>
+              <td>
+                <span>正常</span>
+              </td>
+            </tr>
+            <tr>
+              <td class="th">
+                <b>欠税名单</b>
+              </td>
+              <td>
+                <span></span>
+              </td>
+              <td>
+                <span>正常</span>
+              </td>
+            </tr>
+            <tr>
+              <td class="th">
+                <b>行政处罚记录</b>
+              </td>
+              <td>
+                <span>6</span>
+              </td>
+              <td>
+                <span>低风险</span>
+              </td>
+            </tr>
+            <tr>
+              <td class="th">
+                <b>12315投诉预警</b>
+              </td>
+              <td>
+                <span>13</span>
+              </td>
+              <td>
+                <span>低风险</span>
+              </td>
+            </tr>
+            <tr>
+              <td class="th">
+                <b>法院诉讼预警</b>
+              </td>
+              <td>
+                <span>25</span>
+              </td>
+              <td>
+                <span>低风险</span>
+              </td>
+            </tr>
+            <tr>
+              <td class="th">
+                <b>异动风险</b>
+              </td>
+              <td>
+                <span>56</span>
+              </td>
+              <td>
+                <span>低风险</span>
+              </td>
+            </tr>
+            <tr>
+              <td class="th">
+                <b>股权变动风险</b>
+              </td>
+              <td>
+                <span>2</span>
+              </td>
+              <td>
+                <span>低风险</span>
+              </td>
+            </tr>
+            <tr>
+              <td class="th">
+                <b>破产风险</b>
+              </td>
+              <td>
+                <span></span>
+              </td>
+              <td>
+                <span>正常</span>
+              </td>
+            </tr>
+            <tr>
+              <td class="th">
+                <b>非法集资风险</b>
+              </td>
+              <td>
+                <span></span>
+              </td>
+              <td>
+                <span>正常</span>
+              </td>
+            </tr>
+            <tr>
+              <td class="th">
+                <b>负面舆情风险</b>
+              </td>
+              <td>
+                <span></span>
+              </td>
+              <td>
+                <span>正常</span>
+              </td>
+            </tr>
+            </tbody>
+          </table>
         </div>
-        <el-collapse accordion>
-          <el-collapse-item v-for="(item, index) in collapseList" :key="index" :name="index">
-            <template slot="title">
-              <el-col>
-                <el-row class="row-title">{{item.title}}</el-row>
-              </el-col>
-            </template>
-            <el-table
-              :data="tableData"
-              stripe
-              border
-              size="small"
-            >
-              <el-table-column
-                prop="code"
-                label="序号"
-                header-align="center"
-                align="center"
-                width="100">
-              </el-table-column>
-              <el-table-column
-                prop="date"
-                label="列入日期"
-                header-align="center"
-                align="center"
-                width="150">
-              </el-table-column>
-              <el-table-column
-                prop="yuanyin"
-                header-align="center"
-                align="left"
-                label="列入经营异常名录原因"
-                width="">
-              </el-table-column>
-              <el-table-column
-                prop="jiguan"
-                header-align="center"
-                align="left"
-                label="作出决定机关"
-                width="">
-              </el-table-column>
-              <el-table-column
-                prop="yichudate"
-                header-align="center"
-                align="center"
-                label="移出日期"
-                width="150">
-              </el-table-column>
-              <el-table-column
-                prop="yichuyuanyin"
-                header-align="center"
-                align="left"
-                label="移出经营异常名录原因"
-                width="">
-              </el-table-column>
-            </el-table>
-          </el-collapse-item>
-        </el-collapse>
-        <div style="margin-top: 10px" class="talent-title">
-          <span>法律诉讼</span>
-          <el-button
-            style="font-size: 10px;padding: 2px 4px"
-            size="mini"
-            type="warning"
-            plain>
-            警示信息
-          </el-button>
-        </div>
-        <el-collapse accordion>
-          <el-collapse-item v-for="(item, index) in warnList" :key="index" :name="index">
-            <template slot="title">
-              <el-col>
-                <el-row class="row-title">{{item.title}}</el-row>
-              </el-col>
-            </template>
-            <el-table
-              :data="warnData"
-              stripe
-              border
-              size="small"
-            >
-              <el-table-column
-                prop="code"
-                label="序号"
-                header-align="center"
-                align="center"
-                width="100">
-              </el-table-column>
-              <el-table-column
-                prop="date"
-                label="发布日期"
-                header-align="center"
-                align="center"
-                width="150">
-              </el-table-column>
-              <el-table-column
-                prop="name"
-                header-align="center"
-                align="left"
-                label="案件名称"
-                width="">
-              </el-table-column>
-              <el-table-column
-                prop="liyou"
-                header-align="center"
-                align="left"
-                label="案由"
-                width="">
-              </el-table-column>
-              <el-table-column
-                prop="shenfen"
-                header-align="center"
-                align="center"
-                label="案件身份"
-                width="150">
-              </el-table-column>
-              <el-table-column
-                prop="anhao"
-                header-align="center"
-                align="left"
-                label="案号"
-                width="">
-              </el-table-column>
-              <el-table-column
-                prop="pred"
-                header-align="center"
-                align="center"
-                label="操作"
-                width="100">
-              </el-table-column>
-            </el-table>
-          </el-collapse-item>
-        </el-collapse>
       </el-tab-pane>
     </el-tabs>
   </div>
@@ -445,53 +477,12 @@
   export default {
     data () {
       return {
-        collapseList: [
-          {
-            title: '该公司 曾因登记的住所或经营场所无法联系而被列入企业经营异常名录(1)'
-          }
-        ],
-        warnList: [
-          {
-            title: '该公司 曾因著作权权属，侵权纠纷而被他人或公司起诉(1666)'
-          }
-        ],
-        tableData: [{
-          code: '1',
-          date: '2015-07-01',
-          yuanyin: '通过登记的住所或者经营场所无法联系的',
-          jiguan: '北京市工商行政管理局北京经济技术开发区分局',
-          yichudate: '2015-07-14',
-          yichuyuanyin: '列入经营异常名录3年内且依照《经营异常名录管理办法》第九条规定被列入经营异常名录的企业，依法办理登记后，申请移出'
-        }],
-        warnData: [{
-          code: '1',
-          date: '2020-07-31',
-          name: '汕头市澄海区丰源玩具实业有限公司等与大元传媒著作权权属，侵权纠纷二审民事判决书',
-          liyou: '著作权权属，侵权纠纷',
-          shenfen: '上诉人-汕头市澄海区丰源玩具实业有限公司，被告-北京市京东三百六十度电子商务有限公司，大元传媒',
-          anhao: '(2019)京73民终1024号',
-          pred: '详细'
-        }, {
-          code: '2',
-          date: '2020-07-31',
-          name: '华强方特(深圳)动漫有限公司与苏州奇璐服饰有限公司，北京京东三百六十度电子商务有限公司著作权权属，侵权纠纷一审民事判决书',
-          liyou: '著作权权属，侵权纠纷',
-          shenfen: '原告-华强方特(深圳)动漫有限公司，被告-北京市京东三百六十度电子商务有限公司，苏州奇璐服饰有限公司',
-          anhao: '(2020)苏0581民初1908号',
-          pred: '详细'
-        }, {
-          code: '3',
-          date: '2020-07-31',
-          name: '华强方特(深圳)动漫有限公司与苏州奇璐服饰有限公司，北京京东三百六十度电子商务有限公司著作权权属，侵权纠纷一审民事判决书',
-          liyou: '著作权权属，侵权纠纷',
-          shenfen: '原告-华强方特(深圳)动漫有限公司，被告-北京市京东三百六十度电子商务有限公司，苏州奇璐服饰有限公司',
-          anhao: '(2020)苏0581民初1908号',
-          pred: '详细'
-        }]
+
       }
     },
     mounted () {
       this.drawLine()
+      this.financeLine()
     },
     methods: {
       drawLine () {
@@ -534,6 +525,112 @@
                 }
               ]
             }
+          ]
+        })
+      },
+      financeLine () {
+        var totalCost = [100, 100, 100, 100, 100, 100] // 背景色比例
+        var visits = [27.00, 92.00, 10.00, 3.00, 67.00, 86.00] // 数值
+        var barcolor = ['#F0A936', '#24AD97', '#C85544', '#C85544', '#F0A936', '#24AD97']
+        var grade = ['资产负债率', '资产总额', '利润增长率', '利润', '收入增长率', '收入']
+        var data = {
+          grade: grade,
+          totalCost: totalCost,
+          visits: visits
+        }
+        let myChart = this.$echarts.init(document.getElementById('financeChart'))
+        myChart.setOption({
+          grid: {
+            top: '5%',
+            left: '30%',
+            right: '20%',
+            bottom: '5%'
+          },
+          tooltip: {
+            show: true
+          },
+          xAxis: {
+            show: false
+          },
+          yAxis: [{
+            type: 'category',
+
+            axisTick: {
+              show: false
+            },
+            axisLine: {
+              show: false
+            },
+            axisLabel: {
+              margin: 10,
+              textStyle: {
+                align: 'right',
+                fontSize: 14
+              }
+            },
+            data: data.grade
+          }, {
+            type: 'category',
+
+            axisLine: {
+              show: false
+            },
+            axisTick: {
+              show: false
+            },
+            axisLabel: {
+              textStyle: {
+                fontSize: 14,
+                color: 'black'
+              },
+              formatter: function (data, index) {
+                return data + '.00'
+              }
+            },
+            splitArea: {
+              show: false
+            },
+            splitLine: {
+              show: false
+            },
+            data: data.visits
+          } ],
+          series: [{
+            type: 'bar',
+            yAxisIndex: 1,
+            itemStyle: {
+              normal: {
+                show: true,
+                color: '#F9F9F9',
+                borderWidth: 0,
+                borderColor: '#F9F9F9'
+              }
+            },
+            barWidth: '35%',
+            silent: true,
+            data: data.totalCost
+          },
+          {
+            type: 'bar',
+            itemStyle: {
+              normal: {
+                show: true,
+                color: function (params) {
+                  var num = barcolor.length
+                  return barcolor[params.dataIndex % num]
+                },
+                borderWidth: 0,
+                borderColor: '#F9F9F9'
+              }
+            },
+            label: {
+              normal: {
+                show: false
+              }
+            },
+            barWidth: '35%',
+            data: data.visits
+          }
           ]
         })
       }
