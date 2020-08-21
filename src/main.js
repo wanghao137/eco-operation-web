@@ -12,8 +12,21 @@ import httpRequest from '@/utils/httpRequest' // api: https://github.com/axios/a
 import { isAuth } from '@/utils'
 import cloneDeep from 'lodash/cloneDeep'
 import BaiduMap from 'vue-baidu-map'
-// 引入echarts
 import echarts from 'echarts'
+import Highchart from 'highcharts/highcharts'
+import HighchartsVue from 'highcharts-vue'
+import exporting from 'highcharts/modules/exporting'
+import sankey from 'highcharts/modules/sankey'
+import oldie from 'highcharts/modules/oldie'
+import sandSignika from 'highcharts/themes/sand-signika'
+import dependencywheel from 'highcharts/modules/dependency-wheel'
+exporting(Highchart)
+sankey(Highchart)
+oldie(Highchart)
+sandSignika(Highchart)
+dependencywheel(Highchart)
+Vue.use(HighchartsVue)
+
 Vue.prototype.$echarts = echarts
 Vue.use(BaiduMap, {
   ak: 'waNgMpAwF3uaYVDhtw2kWcvcgpdvIxtr'
