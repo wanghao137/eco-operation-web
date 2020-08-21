@@ -174,23 +174,23 @@ export default {
           })
         })
       })
-      if (this.input != '') {
+      if (this.input !== '') {
         infoArr['关键词'] = [this.input]
       }
-      if (this.value.length != 0) {
+      if (this.value.length !== 0) {
         infoArr['地区'] = this.value
       }
-      if (this.value.length != 0) {
+      if (this.value.length !== 0) {
         infoArr['行业'] = this.value1
       }
       this.$emit('confirmVal', infoArr)
     },
     handleClick (tab, event) {
-      if (tab.name == 'basic') {
+      if (tab.name === 'basic') {
         this.liIndex = 0
-      } else if (tab.name == 'risk') {
+      } else if (tab.name === 'risk') {
         this.liIndex = 1
-      } else if (tab.name == 'credit') {
+      } else if (tab.name === 'credit') {
         this.liIndex = 2
       }
     }

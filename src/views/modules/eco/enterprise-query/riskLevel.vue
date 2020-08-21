@@ -1,5 +1,27 @@
 <template>
   <div>
+    <div class="main-box" v-for="(item,index) in data[1].child" :key="index">
+      <div class="left">{{item.name}}：</div>
+      <div class="right">
+        <p v-for="(val,num) in item.child" :key="num">
+          <span v-if="val.name=='更多' || val.name=='自定义'">{{val.name}}</span>
+          <el-checkbox v-model="val.check" v-else-if="item.name == '风险级别' || item.name=='信用级别'">
+            <span>{{val.name}}</span>
+          </el-checkbox>
+          <el-checkbox v-model="val.check" v-else>{{val.name}}</el-checkbox>
+        </p>
+      </div>
+    </div>
+    <div style="position: absolute;left: 570px;top: 320px">
+      <el-date-picker
+        v-model="value1"
+        type="daterange"
+        size="small"
+        range-separator="——"
+        start-placeholder="开始日期"
+        end-placeholder="结束日期">
+      </el-date-picker>
+    </div>
     <span>共 <b style="color: red">5679</b> 条符合条件的自身风险信息</span>
     <div class="talent-title">
       <span>经营异常</span>
@@ -148,9 +170,12 @@
 </template>
 
 <script>
+  import json from './components/data.json'
   export default {
     data () {
       return {
+        value1: '',
+        data: [],
         collapseList: [
           {
             title: '该公司 曾因登记的住所或经营场所无法联系而被列入企业经营异常名录(1)'
@@ -159,7 +184,12 @@
         warnList: [
           {
             title: '该公司 曾因著作权权属，侵权纠纷而被他人或公司起诉(1666)'
+          }, {
+            title: '该公司 曾因网络购物合同纠纷而被他人或公司起诉(1092)'
+          }, {
+            title: '该公司 曾因买卖合同纠纷而被他人或公司起诉(329)'
           }
+
         ],
         tableData: [{
           code: '1',
@@ -196,6 +226,26 @@
         }]
       }
     },
+    created () {
+      var data = json
+      data.forEach((info) => {
+        info.child.forEach((item) => {
+          if (typeof item.child[0] !== 'object') {
+            const arr = []
+            item.child.forEach((val) => {
+              const obj = {
+                name: val,
+                check: false
+              }
+              arr.push(obj)
+            })
+            item.child = arr
+          }
+        })
+      })
+      console.log(data)
+      this.data = data
+    },
     methods: {
       handleChange (val) {
         console.log(val)
@@ -205,6 +255,9 @@
 </script>
 
 <style scoped>
+  p{
+    margin: 0;
+  }
   .talent-title{
     margin-top: 20px;
     margin-bottom: 15px;
@@ -225,5 +278,22 @@
   .row-num{
     line-height: 20px;
     font-size: 12px;
+  }
+  .main-box {
+    display: flex;
+    margin-bottom: 15px;
+  }
+  .left {
+    color: #999999;
+    line-height: 30px;
+  }
+  .right {
+    flex: 1;
+    margin-left: 10px;
+  }
+  .right p {
+    display: inline-block;
+    margin-right: 18px;
+    line-height: 30px;
   }
 </style>
