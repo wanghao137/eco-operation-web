@@ -564,7 +564,7 @@ var navDataList = [
     'open': null,
     'list': [
       {
-        'menuId': '19',
+        'menuId': '69',
         'parentId': 18,
         'parentName': null,
         'name': '企业基本情况分析',
@@ -577,7 +577,7 @@ var navDataList = [
         'list': null
       },
       {
-        'menuId': '20',
+        'menuId': '60',
         'parentId': 18,
         'parentName': null,
         'name': '企业活跃度分析',
@@ -590,7 +590,7 @@ var navDataList = [
         'list': null
       },
       {
-        'menuId': '22',
+        'menuId': '62',
         'parentId': 18,
         'parentName': null,
         'name': '资本流动分析',
@@ -618,7 +618,7 @@ var navDataList = [
     ]
   },
   {
-    'menuId': '19',
+    'menuId': '38',
     'parentId': 0,
     'parentName': null,
     'name': '风险企业监控',
@@ -632,7 +632,7 @@ var navDataList = [
     ]
   },
   {
-    'menuId': '20',
+    'menuId': '39',
     'parentId': 0,
     'parentName': null,
     'name': '优质企业挖掘',

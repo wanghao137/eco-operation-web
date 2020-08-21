@@ -350,6 +350,30 @@
           {
             name: '农副产品加工业',
             value: [50, 10]
+          },
+          {
+            name: '水的生产和供应业',
+            value: [45, 5]
+          },
+          {
+            name: '家具制造业',
+            value: [60, 3]
+          },
+          {
+            name: '橡胶和塑料制造业',
+            value: [30, 30]
+          },
+          {
+            name: '其他制造业',
+            value: [30, 25]
+          },
+          {
+            name: '燃气生产和供应业',
+            value: [25, 20]
+          },
+          {
+            name: '废弃资源综合利用业',
+            value: [35, 15]
           }
         ]
         matrixChart.setOption({
@@ -409,7 +433,7 @@
                   xAxis: 35, // x 轴开始位置
                   yAxis: 70, // y 轴结束位置(直接取最大值)
                   itemStyle: {
-                    color: 'rgba(56, 180, 139, .1)'
+                    color: 'none'
                   },
                   label: {
                     position: 'insideTopLeft',
@@ -423,7 +447,7 @@
                   name: '支柱产业',
                   yAxis: 70, // y 轴结束位置(直接取最大值)
                   itemStyle: {
-                    color: 'rgba(68, 97, 123, .1)'
+                    color: 'none'
                   },
                   label: {
                     position: 'insideTopLeft ',
@@ -438,7 +462,7 @@
                   name: '弱势产业',
                   yAxis: 35, // y 轴结束位置
                   itemStyle: {
-                    color: 'rgba(191, 120, 58, .1)'
+                    color: 'none'
                   },
                   label: {
                     position: 'insideTopLeft ',
@@ -454,7 +478,7 @@
                   xAxis: 35, // x 轴开始位置
                   yAxis: 35, // y 轴结束位置
                   itemStyle: {
-                    color: 'rgba(116, 83, 153, .1)'
+                    color: 'none'
                   },
                   label: {
                     position: 'insideTopLeft ',
