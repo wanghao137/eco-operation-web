@@ -10,7 +10,7 @@
 			</div>
 			<div class="yinxiang">
 				<h4>近期媒体印象</h4>
-				<word-cloud-chart id="echarts05" :title="123" :data="echarts05Data"/>
+				<word-cloud-chart id="echarts09" :title="123" :data="echarts05Data"/>
 			</div>
 		</div>
 		<h3 class="title">舆论新闻</h3>

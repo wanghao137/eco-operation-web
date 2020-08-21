@@ -4,77 +4,77 @@
 
 <script>
 export default {
-  name: "hello",
-  data() {
+  name: 'hello',
+  data () {
     return {
-      msg: "Welcome to Your Vue.js App",
-    };
+      msg: 'Welcome to Your Vue.js App'
+    }
   },
-  mounted() {
-    this.drawLine();
+  mounted () {
+    this.drawLine()
   },
-  created() {
-    console.log(this.yAxis);
+  created () {
+    console.log(this.yAxis)
   },
-  props: ["yAxis", "series", "color"],
+  props: ['yAxis', 'series', 'color'],
   watch: {
-    yAxis(val) {
+    yAxis (val) {
       this.drawLine()
-    },
+    }
   },
   methods: {
-    drawLine() {
+    drawLine () {
       // 基于准备好的dom，初始化echarts实例
-      let myChart = this.$echarts.init(document.getElementById("myChart"));
+      let myChart = this.$echarts.init(document.getElementById('myChart'))
       // 绘制图表
       myChart.setOption({
         color: this.color,
         tooltip: {
-          trigger: "axis",
+          trigger: 'axis',
           axisPointer: {
-            type: "shadow",
-          },
+            type: 'shadow'
+          }
         },
         grid: {
-          left: "3%",
-          right: "4%",
-          bottom: "3%",
-          containLabel: true,
+          left: '3%',
+          right: '4%',
+          bottom: '3%',
+          containLabel: true
         },
         xAxis: {
           show: false,
-          type: "value",
+          type: 'value',
           boundaryGap: [0, 0.01],
           axisTick: { show: false },
-          splitLine: { show: false },
+          splitLine: { show: false }
         },
         yAxis: {
-          type: "category",
+          type: 'category',
           data: this.yAxis,
           axisTick: { show: false },
-          splitLine: { show: false },
+          splitLine: { show: false }
         },
         series: [
           {
-            type: "bar",
+            type: 'bar',
             data: this.series,
             itemStyle: {
               normal: {
                 label: {
-                  show: true, //开启显示
-                  position: "right", //在上方显示
+                  show: true, // 开启显示
+                  position: 'right', // 在上方显示
                   textStyle: {
-                    //数值样式
-                    color: "black",
-                    fontSize: 16,
-                  },
-                },
-              },
-            },
-          },
-        ],
-      });
-    },
-  },
-};
+                    // 数值样式
+                    color: 'black',
+                    fontSize: 16
+                  }
+                }
+              }
+            }
+          }
+        ]
+      })
+    }
+  }
+}
 </script>

@@ -1,5 +1,5 @@
 <template>
-  <div id="myChart5" :style="{width: '100%', height: '100%'}"></div>
+  <div id="myCharts5" :style="{width: '100%', height: '100%'}"></div>
 </template>
 
 <script>
@@ -25,7 +25,7 @@ export default {
   methods: {
     drawLine () {
       // 基于准备好的dom，初始化echarts实例
-      let myChart = this.$echarts.init(document.getElementById('myChart5'))
+      let myChart = this.$echarts.init(document.getElementById('myCharts5'))
       // 绘制图表
       myChart.setOption({
         color: this.color,

@@ -1,5 +1,5 @@
 <template>
-  <div id="myChart3" :style="{width: '100%', height: '100%'}"></div>
+  <div id="myCharts3" :style="{width: '100%', height: '100%'}"></div>
 </template>
 
 <script>
@@ -25,7 +25,7 @@ export default {
   methods: {
     drawLine () {
       // 基于准备好的dom，初始化echarts实例
-      let myChart = this.$echarts.init(document.getElementById('myChart3'))
+      let myChart = this.$echarts.init(document.getElementById('myCharts3'))
       // 绘制图表
       myChart.setOption({
         color: this.color,
@@ -83,7 +83,7 @@ export default {
 </script>
 
 <style scoped>
-#myChart3 {
+#myCharts3 {
   margin-top: -30px;
 }
 </style>

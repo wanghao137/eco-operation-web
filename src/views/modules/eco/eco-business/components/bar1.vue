@@ -4,65 +4,65 @@
 
 <script>
 export default {
-  name: "bar2",
-  data() {
+  name: 'bar2',
+  data () {
     return {
-      msg: "Welcome to Your Vue.js App",
-    };
+      msg: 'Welcome to Your Vue.js App'
+    }
   },
-  mounted() {
-    this.drawLine();
+  mounted () {
+    this.drawLine()
   },
-  created() {
-    console.log(this.yAxis);
+  created () {
+    console.log(this.yAxis)
   },
-  props: ["yAxis", "series", "color"],
+  props: ['yAxis', 'series', 'color'],
   watch: {
-    yAxis(val) {
+    yAxis (val) {
       this.drawLine()
-    },
+    }
   },
   methods: {
-    drawLine() {
+    drawLine () {
       // 基于准备好的dom，初始化echarts实例
-      let myChart = this.$echarts.init(document.getElementById("myChart1"));
+      let myChart = this.$echarts.init(document.getElementById('myChart1'))
       // 绘制图表
       myChart.setOption({
         color: this.color,
         tooltip: {
-          trigger: "axis",
+          trigger: 'axis',
           axisPointer: {
-            type: "shadow",
-          },
+            type: 'shadow'
+          }
         },
         grid: {
-          left: "3%",
-          right: "4%",
-          bottom: "3%",
-          containLabel: true,
+          left: '3%',
+          right: '4%',
+          bottom: '3%',
+          containLabel: true
         },
         xAxis: {
-          type: "value",
+          type: 'value',
           boundaryGap: [0, 0.01],
           axisTick: { show: false },
-          splitLine: { show: false },
+          splitLine: { show: false }
         },
         yAxis: {
-          type: "category",
+          type: 'category',
           data: this.yAxis,
           axisTick: { show: false },
-          splitLine: { show: false },
+          splitLine: { show: false }
         },
         series: [
           {
-            type: "bar",
+            type: 'bar',
             data: this.series
-          },
-        ],
-      });
-    },
-  },
-};
+          }
+        ]
+      })
+    }
+  }
+}
 </script>
 
 <style scoped>

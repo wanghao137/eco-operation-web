@@ -90,92 +90,92 @@
 </template>
 
 <script>
-import AdvancedSearch from "./components/advancedSearch";
+import AdvancedSearch from './components/advancedSearch'
 export default {
-  name: "searcjDetails",
-  data() {
+  name: 'searcjDetails',
+  data () {
     return {
       searchData: [],
-      lis: ["企业名称", "统一社会信用代码", "注册地址"],
+      lis: ['企业名称', '统一社会信用代码', '注册地址'],
       liIndex: 0,
-      input: "",
+      input: '',
       dialogVisible: false,
       info: [],
       data: [
         {
-          name: "小米科技有限责任公司",
-          oldName: "北京小米科技有限责任公司",
-          man: "雷军",
-          address: "北京市海淀区清河中街68号华润五彩城购物中心二期13层",
-          time: "2010-03-03",
-          phone: "6060666-1234",
-          email: "chenchongwei@xiaomi.com",
-          www: "www.xiaomi.com",
-        },
-      ],
-    };
+          name: '小米科技有限责任公司',
+          oldName: '北京小米科技有限责任公司',
+          man: '雷军',
+          address: '北京市海淀区清河中街68号华润五彩城购物中心二期13层',
+          time: '2010-03-03',
+          phone: '6060666-1234',
+          email: 'chenchongwei@xiaomi.com',
+          www: 'www.xiaomi.com'
+        }
+      ]
+    }
   },
   components: {
-    AdvancedSearch,
+    AdvancedSearch
   },
   methods: {
-    goTo(){
+    goTo () {
       this.$router.push('panoramic-inf')
     },
-    liFn(index) {
-      this.liIndex = index;
+    liFn (index) {
+      this.liIndex = index
     },
-    reset(){
-      this.$refs.child.reset();
+    reset () {
+      this.$refs.child.reset()
     },
-    confirm() {
-      this.$refs.child.confirm();
+    confirm () {
+      this.$refs.child.confirm()
     },
-    handleClose(done) {
-      this.$confirm("确认关闭？")
+    handleClose (done) {
+      this.$confirm('确认关闭？')
         .then((_) => {
-          done();
+          done()
         })
-        .catch((_) => {});
+        .catch((_) => {})
     },
-    confirmVal(val) {
-      this.dialogVisible = false;
-      this.info = val;
-      var arr = [];
+    confirmVal (val) {
+      this.dialogVisible = false
+      this.info = val
+      var arr = []
       for (let key in this.info) {
         const obj = {
           name: key,
-          child: this.info[key],
-        };
-        arr.push(obj);
+          child: this.info[key]
+        }
+        arr.push(obj)
       }
-      this.info = arr;
+      this.info = arr
     },
-    search() {
-      var arr = [];
+    search () {
+      var arr = []
       this.data.forEach((item) => {
         if (item.name.includes(this.input)) {
-          arr.push(item);
+          arr.push(item)
         }
-      });
-      this.searchData = arr;
-    },
+      })
+      this.searchData = arr
+    }
   },
-  created() {
-    this.input = localStorage.getItem("inpVal");
-    this.info = JSON.parse(localStorage.getItem("info"));
-    var arr = [];
+  created () {
+    this.input = localStorage.getItem('inpVal')
+    this.info = JSON.parse(localStorage.getItem('info'))
+    var arr = []
     for (let key in this.info) {
       const obj = {
         name: key,
-        child: this.info[key],
-      };
-      arr.push(obj);
+        child: this.info[key]
+      }
+      arr.push(obj)
     }
-    this.info = arr;
-    this.search();
-  },
-};
+    this.info = arr
+    this.search()
+  }
+}
 </script>
 
 <style scoped>
