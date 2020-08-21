@@ -493,7 +493,7 @@ var navDataList = [
     'url': null,
     'perms': null,
     'type': 0,
-    'icon': 'tubiao',
+    'icon': 'mudedi',
     'orderNum': 4,
     'open': null,
     'list': [
@@ -559,7 +559,7 @@ var navDataList = [
     'url': null,
     'perms': null,
     'type': 0,
-    'icon': 'tubiao',
+    'icon': 'sq',
     'orderNum': 4,
     'open': null,
     'list': [
@@ -615,6 +615,34 @@ var navDataList = [
       //   'open': null,
       //   'list': null
       // },
+    ]
+  },
+  {
+    'menuId': '19',
+    'parentId': 0,
+    'parentName': null,
+    'name': '风险企业监控',
+    'url': 'eco/eco-business/risk-enterprise',
+    'perms': null,
+    'type': 0,
+    'icon': 'dangdifill',
+    'orderNum': 5,
+    'open': null,
+    'list': [
+    ]
+  },
+  {
+    'menuId': '20',
+    'parentId': 0,
+    'parentName': null,
+    'name': '优质企业挖掘',
+    'url': 'eco/eco-business/quality-enterprise',
+    'perms': null,
+    'type': 0,
+    'icon': 'shoucangfill',
+    'orderNum': 5,
+    'open': null,
+    'list': [
     ]
   },
   {
