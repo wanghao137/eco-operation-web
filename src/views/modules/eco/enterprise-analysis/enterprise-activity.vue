@@ -77,7 +77,7 @@
     },
     mounted () {
       this.drawLine()
-  },
+    },
     methods: {
       cun () {
         this.show = true

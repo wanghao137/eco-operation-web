@@ -1,14 +1,47 @@
 <template>
   <div class="wrap1">
-    <el-tabs v-model="activeName" type="card" @tab-click="handleClick">
+    <!-- <el-tabs v-model="activeName" type="card" @tab-click="handleClick">
       <el-tab-pane v-for="(item,index) in data" :key="index" :label="item.type" :name="item.id"></el-tab-pane>
-    </el-tabs>
+    </el-tabs>-->
     <div class="main">
+      <div v-if="liIndex == 0">
+        <div class="main-box">
+          <div class="left">关键词：</div>
+          <div class="right">
+            <el-input v-model="input" style="width:200px;margin-left:10px" placeholder="请输入关键词,非必填"></el-input>
+          </div>
+        </div>
+        <div class="main-box">
+          <div class="left">地区：</div>
+          <div class="right">
+            <el-cascader
+              v-model="value"
+              style="width:200px;margin-left:24px"
+              :options="options"
+              @change="handleChange"
+            ></el-cascader>
+          </div>
+        </div>
+        <div class="main-box">
+          <div class="left">行业：</div>
+          <div class="right">
+            <el-cascader
+              v-model="value1"
+              style="width:200px;margin-left:24px"
+              :options="options1"
+              @change="handleChange1"
+            ></el-cascader>
+          </div>
+        </div>
+      </div>
       <div class="main-box" v-for="(item,index) in data[liIndex].child" :key="index">
         <div class="left">{{item.name}}：</div>
         <div class="right">
           <p v-for="(val,num) in item.child" :key="num">
             <span v-if="val.name=='更多' || val.name=='自定义'">{{val.name}}</span>
+            <el-checkbox v-model="val.check" v-else-if="item.name == '风险级别' || item.name=='信用级别'">
+              <span :class="color[val.name]">{{val.name}}</span>
+            </el-checkbox>
             <el-checkbox v-model="val.check" v-else>{{val.name}}</el-checkbox>
           </p>
         </div>
@@ -18,215 +51,151 @@
 </template>
 
 <script>
+import json from './data.json'
+import area from './area.json'
+import indusrt from './indusrt.json'
 export default {
-  name: "advancedSearch",
-  data() {
+  name: 'advancedSearch',
+  data () {
     return {
-      data: [
-        {
-          type: "基本信息",
-          id: "basic",
-          child: [
-            {
-              name: "搜索范围",
-              child: [
-                "企业名称",
-                "法人/股东/高管",
-                "产品服务",
-                "商标",
-                "联系方式",
-                "经营范围",
-              ],
-            },
-            {
-              name: "机构类型",
-              child: [
-                "企业",
-                "事业单位",
-                "基金会",
-                "社会组织",
-                "律所",
-                "香港特别行政区企业",
-                "台湾省企业",
-                "更多",
-              ],
-            },
-            {
-              name: "省份地区",
-              child: [
-                "广东省",
-                "北京市",
-                "上海市",
-                "江苏省",
-                "江西省",
-                "浙江省",
-                "山东省",
-                "更多",
-              ],
-            },
-            {
-              name: "注册资本",
-              child: [
-                "0-100万",
-                "100-200万",
-                "200-500万",
-                "500-1000万",
-                "1000万以上",
-                "自定义",
-              ],
-            },
-            {
-              name: "成立时间",
-              child: [
-                "成立一年内",
-                "成立1-5年",
-                "成立5-10年",
-                "成立15年以上",
-                "自定义",
-              ],
-            },
-            {
-              name: "行业分类",
-              child: [
-                "电力、热力、燃气及水生产和供应业",
-                "建筑业",
-                "批发和零售业",
-                "交通运输、仓储和邮政业",
-                "信息传输、计算机服务和软件业",
-                "更多",
-              ],
-            },
-          ],
-        },
-        {
-          type: "风险信息",
-          id: "risk",
-          child: [
-            {
-              name: "风险类别",
-              child: [
-                "全部",
-                "失信人",
-                "税收违法",
-                "行政处罚记录",
-                "法院公告",
-                "法律诉讼",
-                "12135投诉",
-                "立案信息",
-                "高管涉案涉毒",
-                "异常变动",
-                "股权变动",
-                "破产风险",
-                "欺诈风险",
-                "舆情风险",
-              ],
-            },
-            {
-              name: "风险级别",
-              child: ["全部", "高危", "高风险", "低风险", "正常"],
-            },
-            {
-              name: "搜索范围",
-              child: ["企业自身", "关联企业"],
-            },
-          ],
-        },
-        {
-          type: "信用信息",
-          id: "credit",
-          child: [
-            {
-              name: "创新资质",
-              child: ["全部", "商标", "专利", "著作权", "资质荣誉", "政府评级"],
-            },
-            {
-              name: "经营状态",
-              child: ["全部", "招投标", "购地信息", "进出口", "产品信息"],
-            },
-            {
-              name: "发展潜力",
-              child: [
-                "全部",
-                "享受政府扶持补贴",
-                "融资能力",
-                "投资情况",
-                "招聘情况",
-              ],
-            },
-            {
-              name: "财务能力",
-              child: [
-                "全部",
-                "收入行业前20",
-                "利润行业前20",
-                "资产总额行业前20",
-              ],
-            },
-            {
-              name: "信用级别",
-              child: ["全部", "优", "良", "中等", "一般", "较差"],
-            },
-          ],
-        },
-      ],
-      activeName: "basic",
-      liIndex: 0,
-    };
+      input: '',
+      data: [],
+      activeName: 'basic',
+      value: [],
+      options: [],
+      value1: [],
+      options1: [],
+      color: {
+        高危: 'red',
+        高风险: 'orange',
+        低风险: 'yellow',
+        正常: 'green',
+        优: 'c1',
+        良: 'c2',
+        中等: 'c3',
+        一般: 'c4',
+        较差: 'c5'
+      }
+    }
   },
-  created() {
-    var data = this.data;
+  watch: {
+    liIndex (val) {
+      this.reset()
+    }
+  },
+  created () {
+    area.forEach((item) => {
+      item.value = item.name
+      item.label = item.name
+      item.children = item.city
+      item.children.forEach((val) => {
+        val.value = val.name
+        val.label = val.name
+        val.children = val.area
+        var arr = []
+        val.area.forEach((val1) => {
+          const obj = {
+            value: val1,
+            label: val1
+          }
+          arr.push(obj)
+        })
+        val.children = arr
+      })
+    })
+    indusrt.forEach((item) => {
+      item.value = item.name
+      item.label = item.name
+      item.children.forEach((val) => {
+        val.value = val.name
+        val.label = val.name
+        var arr = []
+        val.children = [
+          {
+            name: val.name,
+            label: val.name
+          }
+        ]
+      })
+    })
+    this.options = area
+    this.options1 = indusrt
+    var data = json
     data.forEach((info) => {
       info.child.forEach((item) => {
-        const arr = [];
-        item.child.forEach((val) => {
-          const obj = {
-            name: val,
-            check: false,
-          };
-          arr.push(obj);
-        });
-        item.child = arr;
-      });
-    });
+        if (typeof item.child[0] !== 'object') {
+          const arr = []
+          item.child.forEach((val) => {
+            const obj = {
+              name: val,
+              check: false
+            }
+            arr.push(obj)
+          })
+          item.child = arr
+        }
+      })
+    })
+    console.log(data)
+    this.data = data
   },
+  props: ['liIndex'],
   methods: {
-    reset() {
-      var data = this.data;
+    handleChange (value) {
+      console.log(value)
+    },
+    handleChange1 (value) {
+      console.log(value)
+    },
+    reset () {
+      this.input = ''
+      this.value = []
+      this.value1 = []
+      var data = this.data
       data.forEach((info) => {
         info.child.forEach((item) => {
           item.child.forEach((val) => {
-            val.check = false;
-          });
-        });
-      });
+            val.check = false
+          })
+        })
+      })
       this.data = data
     },
-    confirm() {
-      var infoArr = {};
-      var data = this.data;
+    confirm () {
+      var infoArr = {}
+      var data = this.data
       data.forEach((info) => {
         info.child.forEach((item) => {
           item.child.forEach((val) => {
             if (val.check) {
-              if (!infoArr[item.name]) infoArr[item.name] = [];
-              infoArr[item.name].push(val.name);
+              if (!infoArr[item.name]) infoArr[item.name] = []
+              infoArr[item.name].push(val.name)
             }
-          });
-        });
-      });
-      this.$emit("confirmVal", infoArr);
-    },
-    handleClick(tab, event) {
-      if (tab.name == "basic") {
-        this.liIndex = 0;
-      } else if (tab.name == "risk") {
-        this.liIndex = 1;
-      } else if (tab.name == "credit") {
-        this.liIndex = 2;
+          })
+        })
+      })
+      if (this.input != '') {
+        infoArr['关键词'] = [this.input]
       }
+      if (this.value.length != 0) {
+        infoArr['地区'] = this.value
+      }
+      if (this.value.length != 0) {
+        infoArr['行业'] = this.value1
+      }
+      this.$emit('confirmVal', infoArr)
     },
-  },
-};
+    handleClick (tab, event) {
+      if (tab.name == 'basic') {
+        this.liIndex = 0
+      } else if (tab.name == 'risk') {
+        this.liIndex = 1
+      } else if (tab.name == 'credit') {
+        this.liIndex = 2
+      }
+    }
+  }
+}
 </script>
 <style scoped>
 p {
@@ -238,6 +207,7 @@ p {
 }
 .left {
   color: #999999;
+  line-height: 30px;
 }
 .right {
   flex: 1;
@@ -247,5 +217,32 @@ p {
   display: inline-block;
   margin-right: 18px;
   line-height: 30px;
+}
+.red {
+  color: red;
+}
+.orange {
+  color: orange;
+}
+.green {
+  color: green;
+}
+.yellow {
+  color: yellow;
+}
+.c1 {
+  color: rgb(0, 32, 86);
+}
+.c2 {
+  color: rgb(46, 117, 182);
+}
+.c3 {
+  color: rgb(157, 195, 230);
+}
+.c4 {
+  color: rgb(255, 192, 0);
+}
+.c5 {
+  color: rgb(255, 0, 0);
 }
 </style>

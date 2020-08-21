@@ -1,7 +1,7 @@
 <template>
   <div class="wrap">
     <el-dialog title="高级搜索" :visible.sync="dialogVisible" width="60%" :before-close="handleClose">
-      <AdvancedSearch ref="child" @confirmVal='confirmVal'/>
+      <AdvancedSearch ref="child" @confirmVal="confirmVal" :liIndex='liIndex'/>
       <span slot="footer" class="dialog-footer">
         <el-button @click="reset">重置</el-button>
         <el-button type="primary" @click="confirm">确认</el-button>
@@ -18,7 +18,7 @@
           >{{item}}</p>
         </div>
         <div class="box">
-          <div class="inp" v-if="liIndex == 0">
+          <div class="inp">
             <div>
               <el-input v-model="input" placeholder="请输入企业名称等关键字"></el-input>
             </div>
@@ -28,6 +28,11 @@
             <div>
               <el-button @click="dialogVisible = true" style="margin-left:20px">高级搜索</el-button>
             </div>
+          </div>
+          <div class="inp-bot">
+            <el-radio v-model="radio" label="1">企业名称</el-radio>
+            <el-radio v-model="radio" label="2">统一社会信用代码</el-radio>
+            <el-radio v-model="radio" label="3">注册地址</el-radio>
           </div>
         </div>
       </div>
@@ -43,9 +48,10 @@ export default {
     return {
       dialogVisible: false,
       input: '',
-      lis: ['企业名称', '统一社会信用代码', '注册地址'],
+      lis: ['企业全景画像', '企业风险', '企业综合能力'],
       liIndex: 0,
-      info: []
+      info: [],
+      radio: '1'
     }
   },
   components: {
@@ -53,6 +59,8 @@ export default {
   },
   methods: {
     search () {
+      localStorage.setItem('liIndex', this.liIndex)
+      localStorage.setItem('radio', this.radio)
       localStorage.setItem('inpVal', this.input)
       localStorage.setItem('info', JSON.stringify(this.info))
       this.$router.push('searchDetails')
@@ -82,6 +90,12 @@ export default {
 </script>
 
 <style scoped>
+.inp-bot{
+  margin-top: 10px;
+}
+.wrap >>> .el-radio__label{
+  color: white;
+}
 .wrap {
   width: 100%;
   height: 500px;
