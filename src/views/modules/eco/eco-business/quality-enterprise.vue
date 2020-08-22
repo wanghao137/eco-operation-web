@@ -27,7 +27,7 @@
             <div id="echart" style="width:100%;height:240px;"></div>
           </div>
           <div class="mid-right">
-            <div class="txt" style="color:black;margin:0;text-align:center;margin-top:-10px">优秀企业名单</div>
+            <div class="txt" style="color:black;margin:0;text-align:center;margin-top:-10px"><span>{{dataValue}}</span> 优秀企业名单</div>
             <el-table :data="tabs[liIndex].data" stripe style="width: 100%">
               <el-table-column prop="name" label="企业名称" width="190"></el-table-column>
               <el-table-column prop="mark1" label="单项得分"></el-table-column>
@@ -215,6 +215,7 @@ export default {
       yAxis: [],
       series: [],
       color: [],
+      dataValue: '自身特征',
       yAxis1: ['地市1', '地市2', '地市3', '地市4', '地市5', '地市6', '地市7'],
       series1: [900, 800, 700, 600, 500, 400, 300],
       color1: 'rgb(169,197,149)',
@@ -686,6 +687,7 @@ export default {
     },
     drawLine () {
       // 基于准备好的dom，初始化echarts实例
+      const _this = this
       let myChart = this.$echarts.init(document.getElementById('echart'))
       // 绘制图表
       myChart.setOption({
@@ -703,11 +705,12 @@ export default {
             { name: '经营状态', max: 38000 },
             { name: '财务能力', max: 52000 },
             { name: '守法合规', max: 25000 }
-          ]
+          ],
+          triggerEvent: true
         },
         series: [
           {
-            name: '预算 vs 开销（Budget vs spending）',
+            name: '',
             type: 'radar',
             // areaStyle: {normal: {}},
             data: [
@@ -725,7 +728,11 @@ export default {
             ]
           }
         ]
-      })
+      },
+        myChart.on('click', function (params) {
+          console.log(params.name)
+          _this.dataValue = params.name
+        }))
     }
   }
 }

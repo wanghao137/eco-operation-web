@@ -4,7 +4,7 @@
           <div class="head-box">
             <div style="margin-top: 10px" class="head-left">小米科技有限责任公司</div>
             <div class="head-right">
-              <el-tabs v-model="activeName">
+              <el-tabs @tab-click="handleClick" v-model="activeName">
                 <el-tab-pane
                   :label="item.name"
                   :name="item.path"
@@ -54,9 +54,19 @@ export default {
       activeName: 'panImages' // 当前组件
     }
   },
-  methods: {},
-  created () {
-    // this.menu = menu
+  methods: {
+    updateType () {
+      if (this.$route.query.activeName !== undefined) {
+        this.activeName = this.$route.query.activeName
+      } else {
+        this.activeName = 'panImages'
+      }
+    },
+    handleClick () {
+    }
+  },
+  mounted: function () {
+    this.updateType()
   }
 }
 </script>

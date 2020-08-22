@@ -24,6 +24,7 @@ export default {
   },
   methods: {
     drawLine () {
+      const _this = this
       // 基于准备好的dom，初始化echarts实例
       let myChart = this.$echarts.init(document.getElementById('myChart'))
       // 绘制图表
@@ -73,7 +74,10 @@ export default {
             }
           }
         ]
-      })
+      },
+        myChart.on('click', function (params) {
+          _this.$emit('code', params.name)
+        }))
     }
   }
 }

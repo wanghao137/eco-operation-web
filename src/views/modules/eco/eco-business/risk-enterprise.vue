@@ -23,11 +23,11 @@
         </div>
         <div class="mid">
           <div class="mid-left">
-            <Bar :yAxis="yAxis" :series="series" :color="color" ref="bar" />
+            <Bar @code="change($event)" :yAxis="yAxis" :series="series" :color="color" ref="bar" />
           </div>
           <div class="mid-right">
             <div class="txt" style="color:black;margin:0;text-align:center;margin-top:-10px">
-              <span>{{tabs[liIndex].name}}</span> 风险事项
+              <span>{{tabs[liIndex].name1}}</span> 风险事项
             </div>
             <el-table :data="tabs[liIndex].data" stripe style="width: 100%">
               <el-table-column prop="name" label="企业名称" width="190"></el-table-column>
@@ -246,6 +246,7 @@ export default {
         },
         {
           name: '高危企业',
+          name1: '高危企业',
           num: 12,
           yAxis: [
             '破产风险',
@@ -291,6 +292,7 @@ export default {
         },
         {
           name: '高风险企业',
+          name1: '高风险企业',
           num: 14,
           yAxis: [
             '破产风险',
@@ -336,6 +338,7 @@ export default {
         },
         {
           name: '低风险企业',
+          name1: '低风险企业',
           num: 16,
           yAxis: [
             '破产风险',
@@ -381,6 +384,7 @@ export default {
         },
         {
           name: '正常企业',
+          name1: '正常企业',
           num: 118,
           yAxis: [
             '破产风险',
@@ -557,7 +561,11 @@ export default {
         this.color = this.tabs[this.liIndex].color
         this.$refs.bar.drawLine()
       }
+    },
+    change (data) {
+      this.tabs[this.liIndex].name1 = data
     }
+
   }
 }
 </script>

@@ -292,7 +292,7 @@
                 <b>融资能力</b>
               </td>
               <td>
-                <span>9</span>
+                <a style="cursor: pointer" @click="rongziClick()">9</a>
               </td>
               <td>
                 <span>融资轮次，估值，投资方</span>
@@ -303,8 +303,7 @@
                 <b>投资情况</b>
               </td>
               <td>
-                <span>56
-                </span>
+                <a style="cursor: pointer" @click="handleClick()">56</a>
               </td>
               <td>
                 <span>投资行业，投资次数，投资总额，投资比例
@@ -633,6 +632,16 @@
           }
           ]
         })
+      },
+      handleClick () {
+        this.$router.push(
+        {path: '/enterprise-query/panoramic-inf?activeName=panImages'}
+        )
+      },
+      rongziClick () {
+        this.$router.push(
+          {path: '/enterprise-query/panoramic-inf?activeName=riskLevel'}
+        )
       }
     }
   }
