@@ -94,7 +94,7 @@ export default {
 }
 .wrap {
   width: 100%;
-  height: 500px;
+  height: 560px;
   background: url(../../../../assets/img/banner.png);
   background-size: 100%;
   position: relative;

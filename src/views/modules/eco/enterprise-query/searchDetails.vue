@@ -23,10 +23,9 @@
               <el-input v-model="input" placeholder="请输入企业名称等关键字"></el-input>
             </div>
             <div>
-              <el-button type="primary" @click="search" style="margin-left:-2px">查询</el-button>
+              <el-button type="primary" @click="search" style="margin-left:20px">查询</el-button>
             </div>
             <div>
-              <el-button @click="dialogVisible = true" style="margin-left:20px">高级搜索</el-button>
             </div>
           </div>
         </div>
@@ -132,11 +131,7 @@ export default {
       this.$refs.child.confirm()
     },
     handleClose (done) {
-      this.$confirm('确认关闭？')
-        .then((_) => {
-          done()
-        })
-        .catch((_) => {})
+      done()
     },
     confirmVal (val) {
       this.dialogVisible = false

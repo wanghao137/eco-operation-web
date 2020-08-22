@@ -11,7 +11,7 @@
      <div class="cunWrap" v-show="show">
         <div class="cunTop">
           <div class="cunleft">
-            <div id="myChartcunl"> </div>
+            <div id="myChartcunlls"> </div>
           </div>
           <div class="cunCenter">
             <div id="myCharts"> </div>
@@ -89,7 +89,7 @@
       },
       drawLine () {
         // 基于准备好的dom，初始化echarts实例
-        let myChart = this.$echarts.init(document.getElementById('myChartcunl'))
+        let myChart = this.$echarts.init(document.getElementById('myChartcunlls'))
         myChart.setOption({
            // 绘制图表
           // color: ['steelblue'],
@@ -753,7 +753,7 @@
     padding: 20px;
     box-sizing: border-box;
   }
-   #myChartcunl{
+   #myChartcunlls{
     width: 100%;
     height: 300px;
   }
