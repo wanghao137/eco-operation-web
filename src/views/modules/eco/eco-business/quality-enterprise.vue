@@ -730,7 +730,6 @@ export default {
         ]
       },
         myChart.on('click', function (params) {
-          console.log(params.name)
           _this.dataValue = params.name
         }))
     }

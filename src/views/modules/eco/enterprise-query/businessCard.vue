@@ -187,8 +187,6 @@ export default {
       map.addOverlay(circle)
     },
     getClickInfo (e) {
-      console.log(e.point.lng)
-      console.log(e.point.lat)
       this.center.lng = e.point.lng
       this.center.lat = e.point.lat
     },
