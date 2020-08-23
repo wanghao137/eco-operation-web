@@ -78,9 +78,17 @@
         currentView: 'businessCard' // 当前组件
       }
     },
+    props: ['activeChild'],
     methods: {},
     created () {
       this.menu = menu
+      if (this.activeChild === 'touzi') {
+        this.currentView = 'enterpriseInvestment'
+      } else if (this.activeChild === 'zhaopin') {
+        this.currentView = 'talentDemand'
+      } else if (this.activeChild === 'rongzi') {
+        this.currentView = 'info'
+      }
     }
   }
 </script>

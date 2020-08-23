@@ -18,7 +18,7 @@
             </div>
           </div>
         </div>
-        <div :is="activeName" keep-alive></div>
+        <div :is="activeName" @changeComponentData="componentDataChange" :activeChild='activechildName' keep-alive></div>
   </div>
 </template>
 <script>
@@ -51,22 +51,18 @@ export default {
           'path': 'creditEva'
         }
       ], // 菜单
-      activeName: 'panImages' // 当前组件
+      activeName: 'panImages',
+      activechildName: ''
     }
   },
   methods: {
-    updateType () {
-      if (this.$route.query.activeName !== undefined) {
-        this.activeName = this.$route.query.activeName
-      } else {
-        this.activeName = 'panImages'
-      }
+    componentDataChange (params) {
+      console.log(params)
+      this.activeName = 'panImages'
+      this.activechildName = params
     },
     handleClick () {
     }
-  },
-  mounted: function () {
-    this.updateType()
   }
 }
 </script>

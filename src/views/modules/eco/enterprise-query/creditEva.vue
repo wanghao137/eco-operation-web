@@ -292,7 +292,7 @@
                 <b>融资能力</b>
               </td>
               <td>
-                <a style="cursor: pointer" @click="rongziClick()">9</a>
+                <a style="cursor: pointer" @click="rongzi()">9</a>
               </td>
               <td>
                 <span>融资轮次，估值，投资方</span>
@@ -315,7 +315,7 @@
                 <b>招聘情况</b>
               </td>
               <td>
-                <span>23</span>
+                <a style="cursor: pointer" @click="zhaopin()">23</a>
               </td>
               <td>
                 <span>近期招聘频次和人数</span>
@@ -634,14 +634,13 @@
         })
       },
       handleClick () {
-        this.$router.push(
-        {path: '/enterprise-query/panoramic-inf?activeName=panImages'}
-        )
+        this.$emit('changeComponentData', 'touzi')
       },
-      rongziClick () {
-        this.$router.push(
-          {path: '/enterprise-query/panoramic-inf?activeName=riskLevel'}
-        )
+      zhaopin () {
+        this.$emit('changeComponentData', 'zhaopin')
+      },
+      rongzi () {
+        this.$emit('changeComponentData', 'rongzi')
       }
     }
   }
