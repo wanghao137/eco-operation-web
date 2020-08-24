@@ -28,7 +28,7 @@
 		</div>
 		<div class="content">
 			<div class="content-l">
-				<p class="title">宁波市全部行业资本流出地区</p>
+				<p class="title">XX市全部行业资本流出地区</p>
 				<div class="chartOptions">
 					<div id="map" class="map"></div>
 				</div>
@@ -36,7 +36,7 @@
 			<div class="content-r">
 				<div class="content-r-r">
 					<div class="content-r-t">
-						<p class="title">宁波市全部行业资本流出前十城市</p>
+						<p class="title">XX市全部行业资本流出前十城市</p>
 						<div style="padding:15px;">
 							<el-table :data="tableData" style="width: 100%;" height="250" border>
 								<el-table-column prop="id" label="排名" align="center">
@@ -49,7 +49,7 @@
 						</div>
 					</div>
 					<div class="content-r-b">
-						<p class="title">宁波市全部行业资本流出主要行业</p>
+						<p class="title">XX市全部行业资本流出主要行业</p>
 						<div id="charts"></div>
 					</div>
 				</div>

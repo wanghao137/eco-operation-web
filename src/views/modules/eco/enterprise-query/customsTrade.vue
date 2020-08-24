@@ -143,11 +143,6 @@
               name: '出口额',
               type: 'line',
               stack: '总量',
-              areaStyle: {
-                normal: {
-                  color: '#8cd5c2' // 改变区域颜色
-                }
-              },
               itemStyle: {
                 normal: {
                   color: '#8cd5c2', // 改变折线点的颜色
@@ -162,11 +157,6 @@
               name: '进口额',
               type: 'line',
               stack: '总量',
-              areaStyle: {
-                normal: {
-                  color: 'steelblue' // 改变区域颜色
-                }
-              },
               itemStyle: {
                 normal: {
                   color: 'steelblue', // 改变折线点的颜色
@@ -187,7 +177,7 @@
 <style scoped>
   .wrap{
     width: 100%;
-                  display: flex;
+    display: flex;
     flex-direction: column;
   }
   .titles{

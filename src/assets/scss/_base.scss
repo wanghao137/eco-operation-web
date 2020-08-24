@@ -124,7 +124,7 @@ img {
   z-index: 1030;
   height: 50px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, .08);
-  background-color: $navbar--background-color;
+  background-color: #2b303b;
 
   &--inverse {
     .site-navbar__body {
@@ -243,7 +243,11 @@ img {
     }
   }
 }
-
+.img-logo{
+  width: 32px;
+  height: 32px;
+  margin-right: 10px;
+}
 
 /* Sidebar
 ------------------------------ */

@@ -122,9 +122,9 @@
           ],
           series: [
             {
-              name: '直接访问',
+              name: '税费总额',
               type: 'bar',
-              barWidth: '60%',
+              barWidth: '30%',
               data: [10, 52, 200, 334, 390, 330]
             }
           ]

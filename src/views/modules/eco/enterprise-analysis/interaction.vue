@@ -15,11 +15,11 @@
 			<div class="content-r">
 				<div class="content-r-r">
 					<div class="content-r-t">
-						<p class="title">杭州市 流出：477.25亿元，流入：60.20亿元</p>
+						<p class="title">XX市 流出：477.25亿元，流入：60.20亿元</p>
 						<div style="width: 100%;height: 250px" id="zijinss"></div>
 					</div>
 					<div class="content-r-b">
-						<p class="title">杭州市</p>
+						<p class="title">XX市</p>
 						<div style="width: 100%;height: 250px"  id="ziben"></div>
 					</div>
 				</div>

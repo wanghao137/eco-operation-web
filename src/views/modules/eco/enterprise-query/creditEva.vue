@@ -13,19 +13,22 @@
     <div class="main mainMid">
       <div class="left">
         <dl>
+          <dt style="margin-bottom: 10px;font-weight: bold">420</dt>
           <i class="el-icon-s-data"></i>
-          <dd>综合信用等级</dd>
-          <dt>BBB</dt>
+          <dd>综合能力</dd>
+          <dt>优秀</dt>
         </dl>
         <dl>
+          <dt style="margin-bottom: 10px;font-weight: bold">80</dt>
           <i class="el-icon-data-line"></i>
-          <dd>信用评价</dd>
-          <dt>中等风险</dt>
+          <dd>身份特征</dd>
+          <dt>良好</dt>
         </dl>
         <dl>
+          <dt style="margin-bottom: 10px;font-weight: bold">70</dt>
           <i class="el-icon-star-off"></i>
-          <dd>综合信用评分</dd>
-          <dt>619</dt>
+          <dd>风险等级</dd>
+          <dt>低风险</dt>
         </dl>
       </div>
       <div class="right">
@@ -328,7 +331,7 @@
       <el-tab-pane label="财务能力(82)">
         <div id="financeChart" style="width:500px;height:350px;"></div>
       </el-tab-pane>
-      <el-tab-pane label="守法合规(70)">
+      <el-tab-pane label="守法守规(70)">
         <div class="infor-table">
           <table border="0" background="white" bgcolor="white">
             <tbody>

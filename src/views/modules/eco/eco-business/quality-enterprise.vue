@@ -215,6 +215,7 @@ export default {
       yAxis: [],
       series: [],
       color: [],
+      radarvalue: [],
       dataValue: '自身特征',
       yAxis1: ['地市1', '地市2', '地市3', '地市4', '地市5', '地市6', '地市7'],
       series1: [900, 800, 700, 600, 500, 400, 300],
@@ -263,6 +264,7 @@ export default {
             '严重违法记录'
           ],
           series: [6, 3, 5, 2, 1, 1, 1, 2, 1, 2],
+          radarvalue: [90, 90, 90, 100, 100, 100],
           color: 'rgb(84,130,53)',
           data: [
             {
@@ -318,6 +320,7 @@ export default {
             '严重违法记录'
           ],
           series: [2, 6, 3, 5, 2, 1, 2, 1, 1, 1],
+          radarvalue: [80, 70, 80, 90, 90, 90],
           color: 'rgb(146,208,80)',
           data: [
             {
@@ -373,6 +376,7 @@ export default {
             '严重违法记录'
           ],
           series: [0, 2, 0, 6, 3, 2, 0, 3, 1, 1],
+          radarvalue: [65, 70, 76, 80, 78, 82],
           color: 'rgb(169,209,142)',
           data: [
             {
@@ -428,6 +432,7 @@ export default {
             '严重违法记录'
           ],
           series: [5, 6, 3, 0, 0, 3, 1, 1, 1, 2],
+          radarvalue: [65, 70, 76, 80, 78, 82],
           color: 'rgb(255,192,0)',
           data: [
             {
@@ -483,6 +488,7 @@ export default {
             '严重违法记录'
           ],
           series: [5, 6, 3, 0, 0, 3, 1, 1, 1, 2],
+          radarvalue: [65, 60, 55, 65, 78, 72],
           color: 'red',
           data: [
             {
@@ -670,6 +676,7 @@ export default {
   created () {
     this.yAxis = this.tabs[this.liIndex].yAxis
     this.series = this.tabs[this.liIndex].series
+    this.radarvalue = this.tabs[this.liIndex].radarvalue
     this.color = this.tabs[this.liIndex].color
   },
   mounted () {
@@ -681,8 +688,9 @@ export default {
         this.liIndex = val
         this.yAxis = this.tabs[this.liIndex].yAxis
         this.series = this.tabs[this.liIndex].series
+        this.radarvalue = this.tabs[this.liIndex].radarvalue
         this.color = this.tabs[this.liIndex].color
-        this.$refs.bar.drawLine()
+        this.drawLine()
       }
     },
     drawLine () {
@@ -699,12 +707,12 @@ export default {
             }
           },
           indicator: [
-            { name: '自身特征', max: 6500 },
-            { name: '创新资质', max: 16000 },
-            { name: '发展潜力', max: 30000 },
-            { name: '经营状态', max: 38000 },
-            { name: '财务能力', max: 52000 },
-            { name: '守法合规', max: 25000 }
+            { name: '自身特征', max: 100 },
+            { name: '创新资质', max: 100 },
+            { name: '发展潜力', max: 100 },
+            { name: '经营状态', max: 100 },
+            { name: '财务能力', max: 100 },
+            { name: '守法合规', max: 100 }
           ],
           triggerEvent: true
         },
@@ -715,7 +723,7 @@ export default {
             // areaStyle: {normal: {}},
             data: [
               {
-                value: [4300, 10000, 28000, 35000, 50000, 19000],
+                value: this.radarvalue,
                 lineStyle: {
                   color: 'rgba(81, 141, 213, 0.7)'
                 },

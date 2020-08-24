@@ -226,25 +226,21 @@
           },
           yAxis: {
             type: 'category',
-            data: ['巴西', '印尼', '美国', '印度', '中国', '世界人口(万)']
+            data: ['地市6', '地市5', '地市4', '地市3', '地市2', '地市1']
           },
           series: [
             {
               name: '2011年',
               type: 'bar',
-              data: [18203, 23489, 29034, 104970, 131744, 630230]
-            },
-            {
-              name: '2012年',
-              type: 'bar',
-              data: [19325, 23438, 31000, 121594, 134141, 681807]
+              barWidth: '40%',
+              data: [200, 400, 500, 700, 800, 900]
             }
           ]
         })
         let myChartTh = this.$echarts.init(document.getElementById('myChartTh'))
         myChartTh.setOption({
           title: {
-            text: '某站点用户访问来源',
+            text: '存量企业产业分布',
             left: 'center',
             textStyle: {
               fontWeight: 'normal'
@@ -261,16 +257,14 @@
             // },
           series: [
             {
-              name: '访问来源',
+              name: '产业分布',
               type: 'pie',
               radius: '55%',
               center: ['50%', '60%'],
               data: [
-                        {value: 335, name: '直接访问'},
-                        {value: 310, name: '邮件营销'},
-                        {value: 234, name: '联盟广告'},
-                        {value: 135, name: '视频广告'},
-                        {value: 1548, name: '搜索引擎'}
+                        {value: 335, name: '一产'},
+                        {value: 310, name: '二产'},
+                        {value: 234, name: '三产'}
               ],
               emphasis: {
                 itemStyle: {
@@ -302,7 +296,7 @@
             // },
           series: [
             {
-              name: '访问来源',
+              name: '类型分布',
               type: 'pie',
               radius: ['50%', '70%'],
               avoidLabelOverlap: false,
@@ -313,7 +307,7 @@
               emphasis: {
                 label: {
                   show: true,
-                  fontSize: '30',
+                  fontSize: '16',
                   fontWeight: 'bold'
                 }
               },
@@ -321,11 +315,9 @@
                 show: false
               },
               data: [
-                        {value: 335, name: '直接访问'},
-                        {value: 310, name: '邮件营销'},
-                        {value: 234, name: '联盟广告'},
-                        {value: 135, name: '视频广告'},
-                        {value: 1548, name: '搜索引擎'}
+                {value: 335, name: '内资(非私营)'},
+                {value: 310, name: '私营'},
+                {value: 234, name: '外商投资'}
               ]
             }
           ]
@@ -355,7 +347,7 @@
           xAxis: [
             {
               type: 'category',
-              data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+              data: ['0-500', '500-2000', '2000-5000', '5000-1亿', '1亿-10亿', '10亿以上'],
               axisTick: {
                 alignWithLabel: true
               }
@@ -368,10 +360,10 @@
           ],
           series: [
             {
-              name: '直接访问',
+              name: '规模分布',
               type: 'bar',
-              barWidth: '60%',
-              data: [10, 52, 200, 334, 390, 330, 220]
+              barWidth: '40%',
+              data: [10, 52, 200, 334, 390, 330]
             }
           ]
         })
@@ -400,7 +392,7 @@
           xAxis: [
             {
               type: 'category',
-              data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+              data: ['3年以下', '3-5年', '5-7年', '7-10年', '10年及以上'],
               axisTick: {
                 alignWithLabel: true
               }
@@ -413,10 +405,10 @@
           ],
           series: [
             {
-              name: '直接访问',
+              name: '年龄分布',
               type: 'bar',
-              barWidth: '60%',
-              data: [10, 52, 200, 334, 390, 330, 220]
+              barWidth: '40%',
+              data: [10, 52, 200, 334, 390]
             }
           ]
         })
@@ -450,23 +442,23 @@
           xAxis: {
             type: 'category',
             boundaryGap: false,
-            data: ['周一', '周二', '周三', '周四', '周五', '周六', '周日']
+            data: ['1月', '2月', '3月', '4月', '5月', '6月']
           },
           yAxis: {
             type: 'value'
           },
           series: [
             {
-              name: '邮件营销',
+              name: '新增企业',
               type: 'line',
               stack: '总量',
-              data: [120, 132, 101, 134, 90, 230, 210]
+              data: [120, 132, 101, 134, 90, 230]
             },
             {
-              name: '联盟广告',
+              name: '注吊销企业',
               type: 'line',
               stack: '总量',
-              data: [220, 182, 191, 234, 290, 330, 310]
+              data: [220, 182, 191, 234, 290, 330]
             }
           ]
         })
@@ -498,18 +490,14 @@
           },
           yAxis: {
             type: 'category',
-            data: ['巴西', '印尼', '美国', '印度', '中国', '世界人口(万)']
+            data: ['地市6', '地市5', '地市4', '地市3', '地市2', '地市1']
           },
           series: [
             {
               name: '2011年',
               type: 'bar',
-              data: [18203, 23489, 29034, 104970, 131744, 630230]
-            },
-            {
-              name: '2012年',
-              type: 'bar',
-              data: [19325, 23438, 31000, 121594, 134141, 681807]
+              barWidth: '40%',
+              data: [200, 400, 500, 700, 800, 900]
             }
           ]
         })
@@ -533,16 +521,14 @@
             // },
           series: [
             {
-              name: '访问来源',
+              name: '产业分布',
               type: 'pie',
               radius: '55%',
               center: ['50%', '60%'],
               data: [
-                        {value: 335, name: '直接访问'},
-                        {value: 310, name: '邮件营销'},
-                        {value: 234, name: '联盟广告'},
-                        {value: 135, name: '视频广告'},
-                        {value: 1548, name: '搜索引擎'}
+                {value: 335, name: '一产'},
+                {value: 310, name: '二产'},
+                {value: 234, name: '三产'}
               ],
               emphasis: {
                 itemStyle: {
@@ -574,7 +560,7 @@
             // },
           series: [
             {
-              name: '访问来源',
+              name: '类型分布',
               type: 'pie',
               radius: ['50%', '70%'],
               avoidLabelOverlap: false,
@@ -585,7 +571,7 @@
               emphasis: {
                 label: {
                   show: true,
-                  fontSize: '30',
+                  fontSize: '16',
                   fontWeight: 'bold'
                 }
               },
@@ -593,11 +579,9 @@
                 show: false
               },
               data: [
-                        {value: 335, name: '直接访问'},
-                        {value: 310, name: '邮件营销'},
-                        {value: 234, name: '联盟广告'},
-                        {value: 135, name: '视频广告'},
-                        {value: 1548, name: '搜索引擎'}
+                {value: 335, name: '内资(非私营)'},
+                {value: 310, name: '私营'},
+                {value: 234, name: '外商投资'}
               ]
             }
           ]
@@ -627,7 +611,7 @@
           xAxis: [
             {
               type: 'category',
-              data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+              data: ['0-500', '500-2000', '2000-5000', '5000-1亿', '1亿-10亿', '10亿以上'],
               axisTick: {
                 alignWithLabel: true
               }
@@ -640,10 +624,10 @@
           ],
           series: [
             {
-              name: '直接访问',
+              name: '规模分布',
               type: 'bar',
-              barWidth: '60%',
-              data: [10, 52, 200, 334, 390, 330, 220]
+              barWidth: '40%',
+              data: [10, 52, 200, 334, 390, 330]
             }
           ]
         })
@@ -672,7 +656,7 @@
           xAxis: [
             {
               type: 'category',
-              data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+              data: ['3年以下', '3-5年', '5-7年', '7-10年', '10年及以上'],
               axisTick: {
                 alignWithLabel: true
               }
@@ -685,10 +669,10 @@
           ],
           series: [
             {
-              name: '直接访问',
+              name: '年龄分布',
               type: 'bar',
-              barWidth: '60%',
-              data: [10, 52, 200, 334, 390, 330, 220]
+              barWidth: '40%',
+              data: [10, 52, 200, 334, 390]
             }
           ]
         })

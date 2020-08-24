@@ -40,7 +40,7 @@
           <p v-for="(val,num) in item.child" :key="num">
             <span v-if="val.name=='更多' || val.name=='自定义'">{{val.name}}</span>
             <el-checkbox v-model="val.check" v-else-if="item.name == '风险级别' || item.name=='信用级别'">
-              <span :class="color[val.name]">{{val.name}}</span>
+              <span>{{val.name}}</span>
             </el-checkbox>
             <el-checkbox v-model="val.check" v-else>{{val.name}}</el-checkbox>
           </p>
