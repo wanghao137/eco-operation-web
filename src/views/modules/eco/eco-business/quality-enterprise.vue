@@ -707,7 +707,7 @@ export default {
             }
           },
           indicator: [
-            { name: '自身特征', max: 100 },
+            { name: '身份特征', max: 100 },
             { name: '创新资质', max: 100 },
             { name: '发展潜力', max: 100 },
             { name: '经营状态', max: 100 },

@@ -441,7 +441,7 @@ var navDataList = [
     'perms': null,
     'type': 0,
     'icon': 'sousuo',
-    'orderNum': 4,
+    'orderNum': 1,
     'open': null,
     'list': [
       {
@@ -486,69 +486,31 @@ var navDataList = [
     ]
   },
   {
-    'menuId': '13',
+    'menuId': '38',
     'parentId': 0,
     'parentName': null,
-    'name': '产业发展',
-    'url': null,
+    'name': '风险企业监控',
+    'url': 'eco/eco-business/risk-enterprise',
     'perms': null,
     'type': 0,
-    'icon': 'mudedi',
-    'orderNum': 4,
+    'icon': 'dangdifill',
+    'orderNum': 2,
     'open': null,
     'list': [
-      {
-        'menuId': '14',
-        'parentId': 13,
-        'parentName': null,
-        'name': '挖掘优势产业',
-        'url': 'eco/industrial-dev/adv-industries',
-        'perms': null,
-        'type': 1,
-        'icon': 'mudedi',
-        'orderNum': 1,
-        'open': null,
-        'list': null
-      },
-      {
-        'menuId': '15',
-        'parentId': 13,
-        'parentName': null,
-        'name': '企业成长性分析',
-        'url': 'eco/industrial-dev/Industry-overlap',
-        'perms': null,
-        'type': 1,
-        'icon': 'gc',
-        'orderNum': 2,
-        'open': null,
-        'list': null
-      },
-      {
-        'menuId': '16',
-        'parentId': 13,
-        'parentName': null,
-        'name': '区域产业结构差异',
-        'url': 'eco/industrial-dev/growth-industry',
-        'perms': null,
-        'type': 1,
-        'icon': 'tubiao',
-        'orderNum': 3,
-        'open': null,
-        'list': null
-      }
-      // {
-      //   'menuId': '17',
-      //   'parentId': 13,
-      //   'parentName': null,
-      //   'name': '重点产业链分析',
-      //   'url': 'eco/industrial-dev/key-industrial',
-      //   'perms': null,
-      //   'type': 1,
-      //   'icon': 'shoucangfill',
-      //   'orderNum': 4,
-      //   'open': null,
-      //   'list': null
-      // }
+    ]
+  },
+  {
+    'menuId': '39',
+    'parentId': 0,
+    'parentName': null,
+    'name': '优质企业挖掘',
+    'url': 'eco/eco-business/quality-enterprise',
+    'perms': null,
+    'type': 0,
+    'icon': 'shoucangfill',
+    'orderNum': 3,
+    'open': null,
+    'list': [
     ]
   },
   {
@@ -618,31 +580,69 @@ var navDataList = [
     ]
   },
   {
-    'menuId': '38',
+    'menuId': '13',
     'parentId': 0,
     'parentName': null,
-    'name': '风险企业监控',
-    'url': 'eco/eco-business/risk-enterprise',
+    'name': '产业发展',
+    'url': null,
     'perms': null,
     'type': 0,
-    'icon': 'dangdifill',
+    'icon': 'mudedi',
     'orderNum': 5,
     'open': null,
     'list': [
-    ]
-  },
-  {
-    'menuId': '39',
-    'parentId': 0,
-    'parentName': null,
-    'name': '优质企业挖掘',
-    'url': 'eco/eco-business/quality-enterprise',
-    'perms': null,
-    'type': 0,
-    'icon': 'shoucangfill',
-    'orderNum': 5,
-    'open': null,
-    'list': [
+      {
+        'menuId': '14',
+        'parentId': 13,
+        'parentName': null,
+        'name': '挖掘优势产业',
+        'url': 'eco/industrial-dev/adv-industries',
+        'perms': null,
+        'type': 1,
+        'icon': 'mudedi',
+        'orderNum': 1,
+        'open': null,
+        'list': null
+      },
+      {
+        'menuId': '15',
+        'parentId': 13,
+        'parentName': null,
+        'name': '企业成长性分析',
+        'url': 'eco/industrial-dev/Industry-overlap',
+        'perms': null,
+        'type': 1,
+        'icon': 'gc',
+        'orderNum': 2,
+        'open': null,
+        'list': null
+      },
+      {
+        'menuId': '16',
+        'parentId': 13,
+        'parentName': null,
+        'name': '区域产业结构差异',
+        'url': 'eco/industrial-dev/growth-industry',
+        'perms': null,
+        'type': 1,
+        'icon': 'tubiao',
+        'orderNum': 3,
+        'open': null,
+        'list': null
+      }
+      // {
+      //   'menuId': '17',
+      //   'parentId': 13,
+      //   'parentName': null,
+      //   'name': '重点产业链分析',
+      //   'url': 'eco/industrial-dev/key-industrial',
+      //   'perms': null,
+      //   'type': 1,
+      //   'icon': 'shoucangfill',
+      //   'orderNum': 4,
+      //   'open': null,
+      //   'list': null
+      // }
     ]
   },
   {

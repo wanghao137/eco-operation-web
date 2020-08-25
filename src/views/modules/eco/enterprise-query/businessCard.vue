@@ -84,19 +84,22 @@
     <div class="main mainMid">
       <div class="left">
         <dl>
+          <dt style="margin-bottom: 10px;font-weight: bold">420</dt>
           <i class="el-icon-s-data"></i>
-          <dd>综合信用等级</dd>
-          <dt>BBB</dt>
+          <dd>综合能力</dd>
+          <dt>优秀</dt>
         </dl>
         <dl>
+          <dt style="margin-bottom: 10px;font-weight: bold">80</dt>
           <i class="el-icon-data-line"></i>
-          <dd>信用评价</dd>
-          <dt>低于平均风险</dt>
+          <dd>身份特征</dd>
+          <dt>良好</dt>
         </dl>
         <dl>
+          <dt style="margin-bottom: 10px;font-weight: bold">70</dt>
           <i class="el-icon-star-off"></i>
-          <dd>综合信用评分</dd>
-          <dt>619</dt>
+          <dd>风险等级</dd>
+          <dt>低风险</dt>
         </dl>
       </div>
       <div class="right">

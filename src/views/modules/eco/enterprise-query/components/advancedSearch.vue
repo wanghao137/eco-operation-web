@@ -40,7 +40,7 @@
           <p v-for="(val,num) in item.child" :key="num">
             <span v-if="val.name=='更多' || val.name=='自定义'">{{val.name}}</span>
             <el-checkbox v-model="val.check" v-else-if="item.name == '风险级别' || item.name=='信用级别'">
-              <span>{{val.name}}</span>
+              <span :class="color[val.name]">{{val.name}}</span>
             </el-checkbox>
             <el-checkbox v-model="val.check" v-else>{{val.name}}</el-checkbox>
           </p>
@@ -51,151 +51,211 @@
 </template>
 
 <script>
-import json from './data.json'
-import area from './area.json'
-import indusrt from './indusrt.json'
+import json from "./data.json";
+import area from "./area.json";
+import indusrt from "./indusrt.json";
+import indusrt1 from "./indusrt1.json";
+import { treeDataTranslate } from "@/utils";
 export default {
-  name: 'advancedSearch',
-  data () {
+  name: "advancedSearch",
+  data() {
     return {
-      input: '',
+      input: "",
       data: [],
-      activeName: 'basic',
+      activeName: "basic",
       value: [],
       options: [],
       value1: [],
       options1: [],
       color: {
-        高危: 'red',
-        高风险: 'orange',
-        低风险: 'yellow',
-        正常: 'green',
-        优: 'c1',
-        良: 'c2',
-        中等: 'c3',
-        一般: 'c4',
-        较差: 'c5'
-      }
-    }
+        高危: "red",
+        高风险: "orange",
+        低风险: "yellow",
+        正常: "green",
+        优: "c1",
+        良: "c2",
+        中等: "c3",
+        一般: "c4",
+        较差: "c5",
+      },
+    };
   },
   watch: {
-    liIndex (val) {
-      this.reset()
-    }
+    liIndex(val) {
+      this.reset();
+    },
   },
-  created () {
+  created() {
+    const AZ = [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E",
+      "F",
+      "J",
+      "H",
+      "I",
+      "J",
+      "K",
+      "L",
+      "M",
+      "N",
+      "O",
+      "P",
+      "Q",
+      "R",
+      "S",
+      "T",
+      "U",
+      "V",
+      "W",
+      "X",
+      "Y",
+      "Z",
+    ];
+    let tree = indusrt1;
+    var res = [];
+    for (var i = 0; i < tree.length; i++) {
+      var temp = {},
+        temp1 = {},
+        temp2 = {},
+        temp3 = {};
+      if (AZ.includes(tree[i].num)) {
+        temp.pid = null;
+        temp.id = tree[i].num;
+        temp.label = tree[i]["一级"];
+        temp.value = tree[i]["一级"];
+        if (tree[i].num1) {
+          temp1.id = tree[i].num1;
+          temp1.label = tree[i]["二级"];
+          temp1.value = tree[i]["三级"];
+          temp1.pid = tree[i].num;
+        }
+        if (tree[i].num2) {
+          temp2.id = tree[i].num2;
+          temp2.label = tree[i]["三级"];
+          temp2.value = tree[i]["三级"];
+          temp2.pid = tree[i].num1;
+        }
+        if (tree[i].num3) {
+          temp3.id = tree[i].num3;
+          temp3.label = tree[i]["四级"];
+          temp3.value = tree[i]["四级"];
+          temp3.pid = tree[i].num2;
+        }
+      }
+      if (Object.keys(temp).length > 0) res.push(temp);
+      if (Object.keys(temp1).length > 0) res.push(temp1);
+      if (Object.keys(temp2).length > 0) res.push(temp2);
+      if (Object.keys(temp3).length > 0) res.push(temp3);
+    }
+    const age = "id";
+    const myTree = res.reduce(
+      (all, next) =>
+        all.some((atom) => atom[age] == next[age]) ? all : [...all, next],
+      []
+    );
+    let t = treeDataTranslate(myTree, "id", "pid");
+    console.log(t);
     area.forEach((item) => {
-      item.value = item.name
-      item.label = item.name
-      item.children = item.city
+      item.value = item.name;
+      item.label = item.name;
+      item.children = item.city;
       item.children.forEach((val) => {
-        val.value = val.name
-        val.label = val.name
-        val.children = val.area
-        var arr = []
+        val.value = val.name;
+        val.label = val.name;
+        val.children = val.area;
+        var arr = [];
         val.area.forEach((val1) => {
           const obj = {
             value: val1,
-            label: val1
-          }
-          arr.push(obj)
-        })
-        val.children = arr
-      })
-    })
-    indusrt.forEach((item) => {
-      item.value = item.name
-      item.label = item.name
-      item.children.forEach((val) => {
-        val.value = val.name
-        val.label = val.name
-        var arr = []
-        val.children = [
-          {
-            name: val.name,
-            label: val.name
-          }
-        ]
-      })
-    })
-    this.options = area
-    this.options1 = indusrt
-    var data = json
+            label: val1,
+          };
+          arr.push(obj);
+        });
+        val.children = arr;
+      });
+    });
+    this.options = area;
+    this.options1 = t;
+    var data = json;
     data.forEach((info) => {
       info.child.forEach((item) => {
-        if (typeof item.child[0] !== 'object') {
-          const arr = []
+        if (typeof item.child[0] !== "object") {
+          const arr = [];
           item.child.forEach((val) => {
             const obj = {
               name: val,
-              check: false
-            }
-            arr.push(obj)
-          })
-          item.child = arr
+              check: false,
+            };
+            arr.push(obj);
+          });
+          item.child = arr;
         }
-      })
-    })
-    console.log(data)
-    this.data = data
+      });
+    });
+    this.data = data;
   },
-  props: ['liIndex'],
+  props: ["liIndex"],
   methods: {
-    handleChange (value) {
-      console.log(value)
+    handleChange(value) {
+      console.log(value);
     },
-    handleChange1 (value) {
-      console.log(value)
+    handleChange1(value) {
+      console.log(value);
     },
-    reset () {
-      this.input = ''
-      this.value = []
-      this.value1 = []
-      var data = this.data
+    reset() {
+      this.input = "";
+      this.value = [];
+      this.value1 = [];
+      var data = this.data;
       data.forEach((info) => {
         info.child.forEach((item) => {
           item.child.forEach((val) => {
-            val.check = false
-          })
-        })
-      })
-      this.data = data
+            val.check = false;
+          });
+        });
+      });
+      this.data = data;
     },
-    confirm () {
-      var infoArr = {}
-      var data = this.data
+    confirm() {
+      var infoArr = {};
+      var data = this.data;
       data.forEach((info) => {
         info.child.forEach((item) => {
           item.child.forEach((val) => {
             if (val.check) {
-              if (!infoArr[item.name]) infoArr[item.name] = []
-              infoArr[item.name].push(val.name)
+              if (!infoArr[item.name]) infoArr[item.name] = [];
+              infoArr[item.name].push(val.name);
             }
-          })
-        })
-      })
-      if (this.input !== '') {
-        infoArr['关键词'] = [this.input]
+          });
+        });
+      });
+      console.log(this.value1)
+      if (this.input != "") {
+        infoArr["关键词"] = [this.input];
       }
-      if (this.value.length !== 0) {
-        infoArr['地区'] = this.value
+      if (this.value.length != 0) {
+        infoArr["地区"] = this.value;
       }
-      if (this.value.length !== 0) {
-        infoArr['行业'] = this.value1
+      if (this.value1.length != 0) {
+        infoArr["行业"] = this.value1;
       }
-      this.$emit('confirmVal', infoArr)
+      console.log(infoArr)
+      this.$emit("confirmVal", infoArr);
     },
-    handleClick (tab, event) {
-      if (tab.name === 'basic') {
-        this.liIndex = 0
-      } else if (tab.name === 'risk') {
-        this.liIndex = 1
-      } else if (tab.name === 'credit') {
-        this.liIndex = 2
+    handleClick(tab, event) {
+      if (tab.name == "basic") {
+        this.liIndex = 0;
+      } else if (tab.name == "risk") {
+        this.liIndex = 1;
+      } else if (tab.name == "credit") {
+        this.liIndex = 2;
       }
-    }
-  }
-}
+    },
+  },
+};
 </script>
 <style scoped>
 p {

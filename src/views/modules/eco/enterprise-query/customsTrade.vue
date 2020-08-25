@@ -39,7 +39,7 @@
      <span style="font-size:20px">进口产品</span>
    </div>
    <div class="tablewrap">
-     <el-table :data="tableData" border style="width: 100%">
+     <el-table :data="tableDatas" border style="width: 100%">
             <el-table-column prop="type" label="产品" > </el-table-column>
             <el-table-column prop="time" label="时间" > </el-table-column>
             <el-table-column prop="contry" label="进口国别" > </el-table-column>
@@ -73,23 +73,44 @@
         }],
         value: '2019年',
         tableData: [{
-          type: '契税',
+          type: '手机',
           time: '2016年',
-          contry: '123',
+          contry: '韩国',
           num: '143934.05',
           money: '12143934.05'
         },
         {
-          type: '企业所得税',
+          type: '智能电视',
           time: '2019年',
-          contry: '123',
+          contry: '印度',
           num: '143934.05',
           money: '12143934.05'
         },
         {
-          type: '个人所得税',
+          type: '智能音箱',
           time: '2020年',
-          contry: '123',
+          contry: '巴西',
+          num: '143934.05',
+          money: '12143934.05'
+        }],
+        tableDatas: [{
+          type: 'Axier摄像头',
+          time: '2016年',
+          contry: '日本',
+          num: '143934.05',
+          money: '12143934.05'
+        },
+        {
+          type: '高清手机屏',
+          time: '2019年',
+          contry: '日本',
+          num: '143934.05',
+          money: '12143934.05'
+        },
+        {
+          type: '高端传感器',
+          time: '2020年',
+          contry: '德国',
           num: '143934.05',
           money: '12143934.05'
         }]

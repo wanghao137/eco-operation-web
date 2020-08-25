@@ -10,15 +10,60 @@
 			</div>
 			<div class="yinxiang">
 				<h4>近期媒体印象</h4>
-				<word-cloud-chart id="echarts09" :title="123" :data="echarts05Data"/>
+        <img width="400px" height="300px" src="~@/assets/img/media.png">
+<!--				<word-cloud-chart id="echarts09" :title="123" :data="echarts05Data"/>-->
 			</div>
 		</div>
 		<h3 class="title">舆论新闻</h3>
-		<a class="yulun" href='script:;' v-for="(item,index) in Lists" :key="index">
-			<p style="color:rgba(47,115,235,1)"><span class="tag">{{item.tag}}</span>{{item.title}}</p>
-			<p class="desc">{{item.date}} 新闻来源：{{item.soures}}</p>
-			<p>{{item.content}}</p>
-		</a>
+<!--		<a class="yulun" href='script:;' v-for="(item,index) in Lists" :key="index">-->
+<!--			<p style="color:rgba(47,115,235,1)"><span class="tag">{{item.tag}}</span>{{item.title}}</p>-->
+<!--			<p class="desc">{{item.date}} 新闻来源：{{item.soures}}</p>-->
+<!--			<p>{{item.content}}</p>-->
+<!--		</a>-->
+    <el-table
+      :data="tableData"
+      stripe
+      border
+      size="small"
+    >
+      <el-table-column
+        prop="code"
+        label="序号"
+        header-align="center"
+        align="center"
+        width="100">
+      </el-table-column>
+      <el-table-column
+        prop="namecode"
+        label="标题"
+        header-align="center"
+        align="left"
+        show-overflow-tooltip
+        width="">
+      </el-table-column>
+      <el-table-column
+        prop="laiyuan"
+        header-align="center"
+        align="left"
+        label="来源"
+        width="100">
+      </el-table-column>
+      <el-table-column
+        prop="qingxiang"
+        header-align="center"
+        align="left"
+        show-overflow-tooltip
+        label="情感倾向"
+        width="150">
+      </el-table-column>
+      <el-table-column
+        prop="time"
+        header-align="center"
+        align="left"
+        label="公布时间"
+        width="150">
+      </el-table-column>
+    </el-table>
 	</div>
 </template>
 
@@ -44,87 +89,38 @@
         soures: '91门户',
         content: '91门户消息，今天下午，小米科技即将在北京国家会议中心举行新品发布会，正式发布旗下首款自主研发松果处理器'
       }],
-	      echarts05Data: [{
-	        'name': '西宁特钢',
-	        'value': 2.64
-	      },
-	      {
-	        'name': '西宁',
-	        'value': 4.03
-	      },
-	      {
-	        'name': '持续上涨',
-	        'value': 24.95
-	      },
-	      {
-	        'name': '补助',
-	        'value': 4.04
-	      },
-	      {
-	        'name': '季报',
-	        'value': 5.27
-	      },
-      {
-	        'name': '青海省',
-	        'value': 5.80
-	      },
-	      {
-	        'name': '铁矿石',
-	        'value': 3.09
-	      },
-	      {
-	        'name': '诊股',
-	        'value': 24.71
-	      },
-	      {
-	        'name': '特殊钢',
-	        'value': 6.33
-	      },
-	      {
-	        'name': '有望',
-	        'value': 2.55
-	      },
-	      {
-	        'name': '兑付',
-	        'value': 3.88
-	      },
-	      {
-	        'name': 'H股',
-	        'value': 8.04
-	      },
-	      {
-	        'name': '增资',
-	        'value': 5.87
-	      },
-	      {
-	        'name': '债务',
-	        'value': 6.97
-      },
-	      {
-	        'name': 'A股',
-	        'value': 2.53
-	      },
-	      {
-	        'name': '西部开发',
-	        'value': 2.49
-	      },
-	      {
-	        'name': '半季报',
-	        'value': 3.91
-	      },
-	      {
-	        'name': '补助',
-	        'value': 3.25
-	      },
-	      {
-	        'name': '钢铁行业',
-	        'value': 9.93
-	      },
-	      {
-	        'name': '中国',
-	        'value': 3.65
-	      }
-	      ]
+      echarts05Data: [],
+      tableData: [{
+        code: '1',
+        namecode: '小米委托代理人花98元买假冒充电器索赔10万,店主赔1.2万',
+        laiyuan: '百家号',
+        qingxiang: '消极',
+        time: '2020-03-21 04:22:46'
+      }, {
+        code: '2',
+        namecode: '小米委托代理人花98元买假冒充电器后起诉,店主赔1.2万',
+        laiyuan: '为其信息',
+        qingxiang: '消极',
+        time: '2020-03-21 04:22:46'
+      }, {
+        code: '3',
+        namecode: '小米手机充电时起火 售后以未复工为由多日后仍未解决',
+        laiyuan: '百家号',
+        qingxiang: '消极',
+        time: '2020-03-21 04:22:46'
+      }, {
+        code: '4',
+        namecode: '小米手机充电时起火 售后以未复工为由多日后仍未解决',
+        laiyuan: '新浪财经',
+        qingxiang: '消极',
+        time: '2020-03-21 04:22:46'
+      }, {
+        code: '5',
+        namecode: '工信部约谈小米公司 要求全面排查问题隐患',
+        laiyuan: '百家号',
+        qingxiang: '消极',
+        time: '2020-03-21 04:22:46'
+      }]
 	    }
 	  },
 	  components: {

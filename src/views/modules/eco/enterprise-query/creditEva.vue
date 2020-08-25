@@ -39,7 +39,7 @@
       <span>KPI评价</span>
     </div>
     <el-tabs type="border-card">
-      <el-tab-pane label="自身特征(80)">
+      <el-tab-pane label="身份特征(80)">
         <div class="infor-table">
           <table border="0" background="white" bgcolor="white">
             <tbody>
@@ -331,7 +331,7 @@
       <el-tab-pane label="财务能力(82)">
         <div id="financeChart" style="width:500px;height:350px;"></div>
       </el-tab-pane>
-      <el-tab-pane label="守法守规(70)">
+      <el-tab-pane label="守法合规(70)">
         <div class="infor-table">
           <table border="0" background="white" bgcolor="white">
             <tbody>
@@ -501,7 +501,7 @@
             },
             indicator: [
               { name: '身份特征', max: 6500 },
-              { name: '守法守规', max: 16000 },
+              { name: '守法合规', max: 16000 },
               { name: '发展潜力', max: 30000 },
               { name: '经营状态', max: 38000 },
               { name: '行为偏好', max: 52000 },
