@@ -11,6 +11,7 @@
       // 插件, 放置业务之前加载, 以免业务需求依赖插件时, 还未加载出错
       // 插件 - echarts
       window.SITE_CONFIG.cdnUrl + '/static/plugins/echarts-3.8.5/echarts.js',
+      // 插件 - mock
       window.SITE_CONFIG.cdnUrl + '/static/plugins/mock-1.0.0-beta3/mock-min.js',
       // 插件 - ueditor
       window.SITE_CONFIG.cdnUrl + '/static/plugins/ueditor-1.4.3.3/ueditor.config.js',
